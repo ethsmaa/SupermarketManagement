@@ -1,0 +1,50 @@
+7 transaction found for Kenneth Labrecque
+2022-11-15 citrus fruit
+2023-6-25 rice
+2023-3-25 canned fish
+2023-8-15 margarine
+2023-9-19 rum
+2023-10-22 berries
+2023-3-27 whipped/sour cream
+ 13 transaction found for Paul Thornton
+2022-11-15 shopping bags
+2023-1-13 snack products
+2023-1-12 pip fruit
+2023-3-28 female sanitary products
+2023-1-22 cereals
+2022-12-24 chocolate marshmallow
+2023-5-14 specialty vegetables
+2023-9-2 preservation products
+2023-10-29 tea
+2023-6-21 bottled beer
+2023-10-30 cocoa drinks
+2023-3-4 pip fruit
+2023-10-7 frozen fish
+ 11 transaction found for Arline Grissom
+2023-10-27 sugar
+2022-12-2 hair spray
+2023-2-24 specialty vegetables
+2023-2-11 specialty vegetables
+2022-11-25 oil
+2023-1-14 sparkling wine
+2023-9-2 whipped/sour cream
+2023-4-12 popcorn
+2023-1-25 salty snack
+2023-11-5 softener
+2023-3-30 preservation products
+ 7 transaction found for Sally Bragg
+2023-10-2 pip fruit
+2023-10-22 semi-finished bread
+2023-9-11 mayonnaise
+2023-9-1 vinegar
+2023-8-29 soft cheese
+2023-2-13 newspapers
+2023-5-6 rum
+ 7 transaction found for Paul Cluff
+2023-10-3 salty snack
+2022-11-22 rum
+2023-9-19 cream
+2023-1-19 chewing gum
+2023-3-21 sweet spreads
+2023-4-2 softener
+2023-5-9 frozen dessert
