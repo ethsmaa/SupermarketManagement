@@ -22,12 +22,52 @@ public class FileReader {
                 String[] arrOfStr = data.split(",");
 
                 String userId = arrOfStr[0];
+                String[] arrOfId = userId.split("-");
+                try{
+                    if(arrOfId[0].length() != 8 || arrOfId[1].length() != 4 ||arrOfId[2].length() != 4 ||
+                    arrOfId[3].length() != 4 || arrOfId[4].length() != 12 ) {
+                        throw new Exception("Id format is wrong");
+                    }
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+
+
                 String name = arrOfStr[1];
+
+                try{
+                    if(userId.length() != 36) {
+                        throw new Exception("User id must be 8 characters");
+                    }
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+
+               try { // arrrofStr size must be 4
+                    if(arrOfStr.length != 4) {
+                        throw new Exception("File line must have 4 elements");
+                    }
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+
+               }
+
 
                 String[] arrOfDates = arrOfStr[2].split("-");
                 int year= Integer.parseInt(arrOfDates[0]);
                 int month = Integer.parseInt(arrOfDates[1]);
                 int day = Integer.parseInt(arrOfDates[2]);
+
+                try{
+                    if(year < 0 || month < 0 || day < 0) {
+                        throw new Exception("Date cannot be negative");
+                    }
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+
+
+
 
                 String productName = arrOfStr[3];
 
@@ -55,6 +95,7 @@ public class FileReader {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
+
 
         return map;
     }
