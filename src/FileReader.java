@@ -46,6 +46,10 @@ public class FileReader {
                         map.put(userId, purchase);
                     }
             }
+
+
+
+
             myReader.close();
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
