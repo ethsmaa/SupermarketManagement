@@ -15,6 +15,14 @@ public class Purchase {
         listOfProdcuts.add(product);
     }
 
+    public void sortLinkedList(LinkedList listOfProdcuts) {
+        // yıllar aynıysa
+        // aylar aynıysa
+        // günlere bak
+
+
+    }
+
     public Object getName() {
         return name;
     }

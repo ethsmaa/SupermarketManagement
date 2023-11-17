@@ -1,4 +1,6 @@
-public class PurchaseHashTable extends HashTable{
+public class PurchaseHashTable extends HashTable
+{
+
     @Override
     public void print() {
 
