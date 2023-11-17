@@ -1,5 +1,5 @@
 public class LinkedList {
-    private Node head;
+    Node head;
 
     public void add(Object dataToAdd) {
         Node newNode = new Node(dataToAdd);
@@ -118,6 +118,48 @@ public class LinkedList {
             temp = temp.getLink();
         }
     }
+
+
+    // sort functionç yılları sırala. yıllar da aynısa ayları sırala, aylarda aynıysa günleri sırala
+    public void sort() {
+        for (int i = 0; i < size(); i++) {
+            // for each element for listOfProducts
+            for (int j = 0; j < size(); j++) {
+
+                Product product1 = (Product) get(i);
+                Product product2 = (Product) get(j);
+
+                // if year is same
+                if (product1.date.year == product2.date.year) {
+                    // if month is same
+                    if (product1.date.month == product2.date.month) {
+                        // if day is same
+                        if (product1.date.day == product2.date.day) {
+                            // do nothing
+                        } else if (product1.date.day > product2.date.day) {
+                            // swap
+                            set(i, product2);
+                            set(j, product1);
+                        }
+                    } else if (product1.date.month > product2.date.month) {
+                        // swap
+                        set(i, product2);
+                        set(j, product1);
+                    }
+                } else if (product1.date.year > product2.date.year) {
+                    // swap
+                    set(i, product2);
+                    set(j, product1);
+                }
+            }
+        }
+
+    }
+
+
+
+
+
 
 
 
