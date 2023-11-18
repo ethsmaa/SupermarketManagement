@@ -36,6 +36,7 @@ public abstract class HashTable<T> {
         if (table[hash] != null) {
             System.out.println("There is a collision!");
             return;
+
         }
 
         // collision handling burada gerçekelecek
