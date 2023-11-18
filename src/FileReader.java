@@ -10,7 +10,7 @@ public class FileReader {
         this.fileName = fileName;
     }
 
-    HashTable readAndParseFile() {
+    HashTable readSupermarket() {
         HashTable<Purchase> map = new PurchaseHashTable();
         try {
             File myObj = new File(fileName);
@@ -95,6 +95,38 @@ public class FileReader {
 
         return map;
     }
+
+
+    public void customerReadandParse(HashTable hashMap) {
+        try {
+            File myObj = new File("customer_1K.txt");
+            Scanner myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                String id = myReader.nextLine();
+                searchAndPrint(id, hashMap);
+            }
+
+
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+
+    public void searchAndPrint(String id, HashTable hashMap) {
+        Purchase purchase = (Purchase) hashMap.get(id);
+
+        if(purchase == null) {
+            System.out.println("Customer not found");
+        } else {
+            System.out.printf(" %d transaction found for %s %n", purchase.getListOfProdcuts().size(), purchase.getName());
+            purchase.getListOfProdcuts().print();
+        }
+    }
+
+
+
 
 }
 
