@@ -4,13 +4,23 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        FileReader purchaseFile = new FileReader("supermarket_dataset_50K.csv");
-        PurchaseHashTable hashMap = (PurchaseHashTable) purchaseFile.readSupermarket();
+        FileReaderLP purchaseFile = new FileReaderLP("supermarket_dataset_5.csv");
+        LinearProbingHashTable LINEARhashMap = (LinearProbingHashTable) purchaseFile.readSupermarket();
 
-        hashMap.print();
 
-       // FileReader customerFile = new FileReader("customer_1K.txt");
-       // customerFile.customerReadandParse(hashMap);
+        FileReaderDH purchaseFile2 = new FileReaderDH("supermarket_dataset_5.csv");
+        DoubleHashingHashTable DOUBLEhashMap = (DoubleHashingHashTable) purchaseFile2.readSupermarket();
+
+
+
+        LINEARhashMap.print();
+        System.out.println("---");
+        DOUBLEhashMap.print();
+
+
+
+      // FileReader customerFile = new FileReader("customer_1K.txt");
+       // customerFile.customerReadandParse(LINEARhashMap);
 
 
 

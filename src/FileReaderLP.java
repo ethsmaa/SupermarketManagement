@@ -2,16 +2,19 @@ import java.io.File;  // Import the File class
 import java.io.FileNotFoundException;  // Import this class to handle errors
 import java.util.Scanner; // Import the Scanner class to read text files
 
-public class FileReader {
+public class FileReaderLP {
 
     String fileName;
 
-    public FileReader(String fileName) {
+
+    public FileReaderLP(String fileName) {
         this.fileName = fileName;
     }
 
-    HashTable readSupermarket() {
-        HashTable<Purchase> map = new PurchaseHashTable();
+    AbstractHashTable<Purchase> readSupermarket() {
+        LinearProbingHashTable<Purchase> map = new LinearProbingHashTable<Purchase>();
+
+
         try {
             File myObj = new File(fileName);
             Scanner myReader = new Scanner(myObj);
@@ -107,7 +110,7 @@ public class FileReader {
     }
 
 
-    public void customerReadandParse(HashTable hashMap) {
+    public void customerReadandParse(LinearProbingHashTable hashMap) {
         try {
             File myObj = new File("customer_1K.txt");
             Scanner myReader = new Scanner(myObj);
@@ -124,7 +127,7 @@ public class FileReader {
         }
     }
 
-    public void searchAndPrint(String id, HashTable hashMap) {
+    public void searchAndPrint(String id, LinearProbingHashTable hashMap) {
         Purchase purchase = (Purchase) hashMap.get(id);
 
         if(purchase == null) {
@@ -142,6 +145,8 @@ public class FileReader {
             hash = (31 * hash + key.charAt(i)) % 128;
         return hash;
     }
+
+
 
 
 

@@ -1,30 +1,65 @@
-public class LinearProbingHashTable {
-    private int[] table;
-    private int size;
+public class LinearProbingHashTable<T> extends AbstractHashTable<T> {
 
-    public LinearProbingHashTable(int capacity) {
-        table = new int[capacity];
-        size = 0;
+
+    protected final static int TABLE_SIZE = 1000000;
+
+    protected HashEntry<T>[] table = new HashEntry[TABLE_SIZE];
+
+    public LinearProbingHashTable() {
+        for (int i = 0; i < TABLE_SIZE; i++)
+            table[i] = null;
     }
 
-    public void put(int key, int value) {
-        int index = hashFunction(key);
-        while (table[index] != 0) {
-            index = (index + 1) % table.length; // Linear Probing
+    // hash function for string
+    public int hashFunction(String key) {
+        int hash = 0;
+        for (int i = 0; i < key.length(); i++)
+            hash = (31 * hash + key.charAt(i)) % TABLE_SIZE;
+        return hash;
+    }
+
+    public T get(String key) {
+        int hash = hashFunction(key);
+
+        if (table[hash] != null) {
+            int time = 1;
+            while (table[hash] != null) {
+                if (table[hash].getKey().equals(key)) {
+                    return table[hash].getValue();
+                }
+                hash = (hash + 1) % TABLE_SIZE;
+                time++;
+            }
         }
-        table[index] = value;
-        size++;
+        return null;
     }
 
-    public int get(int key) {
-        int index = hashFunction(key);
-        while (table[index] != key) {
-            index = (index + 1) % table.length; // Linear Probing
+    public void put(String key, T value) {
+        int hash = hashFunction(key);
+
+        while (table[hash] != null) {
+            hash = (hash + 1) % TABLE_SIZE; // linear probing: increment by 1 until empty slot is found
         }
-        return table[index];
+
+        table[hash] = new HashEntry<T>(key, value); // Bu satır eklendi
     }
 
-    private int hashFunction(int key) {
-        return key % table.length;
+
+    @Override
+    public void print() {
+
+
+        for (int i = 0; i < TABLE_SIZE; i++) {
+            if (table[i] != null) {
+                Purchase purchase = (Purchase) table[i].getValue();
+
+                System.out.printf(" %d transaction found for %s %n", purchase.getListOfProdcuts().size(), purchase.getName());
+                purchase.getListOfProdcuts().print();
+            }
+        }
+
+
     }
+
+
 }
