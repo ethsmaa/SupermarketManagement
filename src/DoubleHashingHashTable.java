@@ -31,6 +31,6 @@ public class DoubleHashingHashTable {
     }
 
     private int doubleHashFunction(int key) {
-        return 7 - (key % 7); // Example secondary hash function
+        return 127 - (key % 127); // Example secondary hash function
     }
 }

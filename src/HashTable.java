@@ -33,10 +33,8 @@ public abstract class HashTable<T> {
 
         int hash = hashFunction(key); // Calculate hash value
 
-        if (table[hash] != null) {
-            System.out.println("There is a collision!");
-            return;
-
+        while (table[hash] != null) {
+            hash = doubleHashFunction(hashFunction(key));
         }
 
         // collision handling burada gerçekelecek
@@ -47,5 +45,9 @@ public abstract class HashTable<T> {
 
     //print
     public abstract void print();
+
+    public int doubleHashFunction(int key) {
+        return 127 - (key % 127);
+    }
 }
 
