@@ -1,6 +1,6 @@
 public abstract class HashTable<T> {
 
-    protected final static int TABLE_SIZE = 128;
+    protected final static int TABLE_SIZE = 1000;
 
     protected HashEntry<T>[] table = new HashEntry[TABLE_SIZE];
 
@@ -17,37 +17,41 @@ public abstract class HashTable<T> {
         return hash;
     }
 
-
     public T get(String key) {
-
         int hash = hashFunction(key);
 
-        if (table[hash] == null)
-            return null;
-        else
-            return table[hash].getValue();
-
+        if (table[hash] != null) {
+            int time = 1;
+            while (table[hash] != null) {
+                if (table[hash].getKey().equals(key)) {
+                    return table[hash].getValue();
+                }
+                hash = (hash + doubleHashFunction(key, time)) % TABLE_SIZE;
+                time++;
+            }
+        }
+        return null;
     }
 
     public void put(String key, T value) {
+        int hash = hashFunction(key);
 
-        int hash = hashFunction(key); // Calculate hash value
-
-        while (table[hash] != null) {
-            hash = doubleHashFunction(hashFunction(key));
+        if (table[hash] == null) {
+            table[hash] = new HashEntry<T>(key, value);
+        } else {
+            int time = 1;
+            while (table[hash] != null) {
+                hash = (hash + doubleHashFunction(key, time)) % TABLE_SIZE;
+                time++;
+            }
+            table[hash] = new HashEntry<T>(key, value);
         }
-
-        // collision handling burada gerçekelecek
-
-        table[hash] = new HashEntry(key, value);
-
     }
 
-    //print
+    // print
     public abstract void print();
 
-    public int doubleHashFunction(int key) {
-        return 127 - (key % 127);
+    public int doubleHashFunction(String key, int time) {
+        return (997 - (key.hashCode() % 997)) * time; // Adjust as needed
     }
 }
-

@@ -22,6 +22,10 @@ public class FileReader {
                 String[] arrOfStr = data.split(",");
 
                 String userId = arrOfStr[0];
+
+
+
+
                 String[] arrOfId = userId.split("-");
                 try{
                     if(arrOfId[0].length() != 8 || arrOfId[1].length() != 4 ||arrOfId[2].length() != 4 ||
@@ -35,6 +39,8 @@ public class FileReader {
 
                 String name = arrOfStr[1];
 
+
+               //  System.out.println(hashFunction(userId) + "    " +   name);
                 try{
                     if(userId.length() != 36) {
                         throw new Exception("User id must be 8 characters");
@@ -129,6 +135,13 @@ public class FileReader {
         }
     }
 
+
+    public static int hashFunction(String key) {
+        int hash = 0;
+        for (int i = 0; i < key.length(); i++)
+            hash = (31 * hash + key.charAt(i)) % 128;
+        return hash;
+    }
 
 
 

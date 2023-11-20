@@ -1,51 +1,495 @@
-Customer ID,Customer Name,Date,Product Name
-11c34489-f95a-45ec-a833-8a329e4d1710,Kenneth Labrecque,2023-07-16,soups
-c2582ded-ff4f-4099-a3f4-917cc2074f02,Paul Thornton,2023-05-10,hair spray
-11c34489-f95a-45ec-a833-8a329e4d1710,Kenneth Labrecque,2022-11-15,citrus fruit
-9b9bcbf5-cf08-49de-b9dc-de142a4d8bb8,Paul Cluff,2022-12-20,other vegetables
-c2582ded-ff4f-4099-a3f4-917cc2074f02,Paul Thornton,2022-11-15,shopping bags
-a4cd48db-2983-4ddb-b81d-13577f39218c,Arline Grissom,2023-03-25,cooking chocolate
-11c34489-f95a-45ec-a833-8a329e4d1710,Kenneth Labrecque,2023-06-25,rice
-9b9bcbf5-cf08-49de-b9dc-de142a4d8bb8,Paul Cluff,2023-10-03,salty snack
-a4cd48db-2983-4ddb-b81d-13577f39218c,Arline Grissom,2023-10-27,sugar
-c2582ded-ff4f-4099-a3f4-917cc2074f02,Paul Thornton,2023-01-13,snack products
-23e948c9-0305-4934-9bf1-d88a37e712e8,Sally Bragg,2023-01-06,baking powder
-a4cd48db-2983-4ddb-b81d-13577f39218c,Arline Grissom,2022-12-02,hair spray
-c2582ded-ff4f-4099-a3f4-917cc2074f02,Paul Thornton,2023-01-12,pip fruit
-9b9bcbf5-cf08-49de-b9dc-de142a4d8bb8,Paul Cluff,2022-11-22,rum
-11c34489-f95a-45ec-a833-8a329e4d1710,Kenneth Labrecque,2023-03-25,canned fish
-9b9bcbf5-cf08-49de-b9dc-de142a4d8bb8,Paul Cluff,2023-09-19,cream
-a4cd48db-2983-4ddb-b81d-13577f39218c,Arline Grissom,2023-02-24,specialty vegetables
-23e948c9-0305-4934-9bf1-d88a37e712e8,Sally Bragg,2023-10-02,pip fruit
-9b9bcbf5-cf08-49de-b9dc-de142a4d8bb8,Paul Cluff,2023-01-19,chewing gum
-a4cd48db-2983-4ddb-b81d-13577f39218c,Arline Grissom,2023-02-11,specialty vegetables
-c2582ded-ff4f-4099-a3f4-917cc2074f02,Paul Thornton,2023-03-28,female sanitary products
-23e948c9-0305-4934-9bf1-d88a37e712e8,Sally Bragg,2023-10-22,semi-finished bread
-a4cd48db-2983-4ddb-b81d-13577f39218c,Arline Grissom,2022-11-25,oil
-9b9bcbf5-cf08-49de-b9dc-de142a4d8bb8,Paul Cluff,2023-03-21,sweet spreads
-a4cd48db-2983-4ddb-b81d-13577f39218c,Arline Grissom,2023-01-14,sparkling wine
-c2582ded-ff4f-4099-a3f4-917cc2074f02,Paul Thornton,2023-01-22,cereals
-23e948c9-0305-4934-9bf1-d88a37e712e8,Sally Bragg,2023-09-11,mayonnaise
-c2582ded-ff4f-4099-a3f4-917cc2074f02,Paul Thornton,2022-12-24,chocolate marshmallow
-c2582ded-ff4f-4099-a3f4-917cc2074f02,Paul Thornton,2023-05-14,specialty vegetables
-c2582ded-ff4f-4099-a3f4-917cc2074f02,Paul Thornton,2023-09-02,preservation products
-c2582ded-ff4f-4099-a3f4-917cc2074f02,Paul Thornton,2023-10-29,tea
-23e948c9-0305-4934-9bf1-d88a37e712e8,Sally Bragg,2023-09-01,vinegar
-a4cd48db-2983-4ddb-b81d-13577f39218c,Arline Grissom,2023-09-02,whipped/sour cream
-c2582ded-ff4f-4099-a3f4-917cc2074f02,Paul Thornton,2023-06-21,bottled beer
-23e948c9-0305-4934-9bf1-d88a37e712e8,Sally Bragg,2023-08-29,soft cheese
-11c34489-f95a-45ec-a833-8a329e4d1710,Kenneth Labrecque,2023-08-15,margarine
-c2582ded-ff4f-4099-a3f4-917cc2074f02,Paul Thornton,2023-10-30,cocoa drinks
-9b9bcbf5-cf08-49de-b9dc-de142a4d8bb8,Paul Cluff,2023-04-02,softener
-23e948c9-0305-4934-9bf1-d88a37e712e8,Sally Bragg,2023-02-13,newspapers
-a4cd48db-2983-4ddb-b81d-13577f39218c,Arline Grissom,2023-04-12,popcorn
-a4cd48db-2983-4ddb-b81d-13577f39218c,Arline Grissom,2023-01-25,salty snack
-c2582ded-ff4f-4099-a3f4-917cc2074f02,Paul Thornton,2023-03-04,pip fruit
-c2582ded-ff4f-4099-a3f4-917cc2074f02,Paul Thornton,2023-10-07,frozen fish
-9b9bcbf5-cf08-49de-b9dc-de142a4d8bb8,Paul Cluff,2023-05-09,frozen dessert
-a4cd48db-2983-4ddb-b81d-13577f39218c,Arline Grissom,2023-11-05,softener
-11c34489-f95a-45ec-a833-8a329e4d1710,Kenneth Labrecque,2023-09-19,rum
-a4cd48db-2983-4ddb-b81d-13577f39218c,Arline Grissom,2023-03-30,preservation products
-11c34489-f95a-45ec-a833-8a329e4d1710,Kenneth Labrecque,2023-10-22,berries
-23e948c9-0305-4934-9bf1-d88a37e712e8,Sally Bragg,2023-05-06,rum
-11c34489-f95a-45ec-a833-8a329e4d1710,Kenneth Labrecque,2023-03-27,whipped/sour cream
+e45d5d54-b4d3-4efb-9127-44e7e97e3987,Charline Craft,2023-08-18,sparkling wine
+5003c4af-98a1-4d90-af0e-10d54ddd2a10,James Johnson,2023-08-24,toilet cleaner
+9a035913-c18c-44e9-9635-896a25025d50,Marilyn Burns,2022-12-11,oil
+58e765df-d982-46af-9037-ea88d63075df,Juan Madrid,2023-08-21,processed cheese
+478031fe-55cb-4ec7-8a2e-b9e52b713263,Ramon Rokus,2023-01-12,brown bread
+094cde5d-014a-4c24-9c7a-47c263d8e079,Louis Reyes,2023-06-22,liquor (appetizer)
+a2d5eda1-dd6b-47e6-8835-a4185d095e5c,Willie Harmon,2023-08-09,turkey
+fab5ce41-9f32-459f-bf63-1e8dd9250f3a,Amy Langford,2023-10-21,oil
+0517fc35-9faa-481b-b503-3d3ec41bf67a,Brooke Willey,2023-10-25,shopping bags
+39d84753-fd4e-4bb0-8efa-c9e88f84cdab,Patsy Jones,2023-05-20,organic products
+0c245dde-3507-4581-8423-49c70e9ce631,Samuel Alexader,2023-05-18,bottled beer
+54215b3c-1423-4715-b47d-9480927221e9,Brenda Mize,2023-09-28,specialty fat
+55e7eaa5-490f-48e3-9216-2ae2b329e876,Sylvia Carter,2023-01-18,toilet cleaner
+24db0c11-6312-472b-8b1e-243a2f0b5ce8,Jamie Adell,2023-10-22,salad dressing
+21909b86-54fd-46c4-a5cb-0fda3dd24bd7,Maria Hyde,2023-09-14,packaged fruit/vegetables
+58d045f7-1d31-4f05-ab82-e06036e0fa28,Gina Grijalva,2023-11-05,frozen fish
+62425e5d-716d-42e7-b7aa-fbb01f8d7180,Lee Warren,2023-08-22,soap
+01200328-39cf-4cab-b162-bf7a41f7624c,Richard Johnson,2022-12-13,dish cleaner
+e931e904-f5b0-49ea-8b01-b56e9c35e084,Thomas Sullivan,2023-06-23,salt
+2252fe65-0e42-40db-8114-a7e57eca72fc,Randy Secrest,2023-02-25,bottled beer
+65a44fc1-67cf-4688-90fe-5b96e24977b8,Daniel Lopez,2023-09-17,jam
+adfa8f10-1aa4-4f24-aa17-600609f3c163,John Kjellman,2023-04-07,kitchen towels
+acab8bbf-2b69-41d2-8583-fa4c1a1f170e,Kevin Harris,2023-04-10,jam
+dd55ea0c-85a9-4e05-a86e-4b53bbd9ac0f,John Jackson,2023-10-17,waffles
+8bb91b74-565e-4530-a659-db0a76920f0f,John Barraclough,2023-04-30,spread cheese
+33fbd1ff-3850-42fc-86ce-a5b0c9f5e029,Carl Kruger,2023-09-27,spread cheese
+e772e399-69f8-47c6-a4ef-b223b7f7f92b,Daniel Clark,2023-04-04,whipped/sour cream
+ea8981ab-da96-4e09-8dd7-49dbf85008f8,Wallace Beaumont,2023-11-06,whole milk
+3491230d-e009-4a06-8960-9c91ec80afa5,Alfred Miller,2022-12-27,organic products
+053fd14e-d380-41de-8805-686b0800eda5,Benjamin Spaulding,2023-06-30,meat
+17886971-3724-48e2-963f-20359f7eea16,Kimberly Larsen,2023-11-05,canned beer
+fe18c87f-244c-4043-8f8a-678129cedc9b,Elizabeth Tricarico,2023-08-13,hamburger meat
+caaefa4e-3120-43f9-b77f-a44a50b1d42a,Ellen Beard,2023-03-01,decalcifier
+3944b094-538f-4378-ae86-b49ba26d6f6e,Christopher Ramirez,2023-10-08,flour
+8b006350-268e-43a6-8b3f-edcba048a0e4,Clarice Tynes,2022-12-14,hygiene articles
+43f0fdac-48dc-4afa-b515-eb7431b5bb40,Elsie Williamson,2023-06-01,herbs
+9409fe91-e1f6-4dec-a822-3c9ed316191b,Dana Brewer,2023-07-10,snack products
+1efe7b18-fe92-4768-98fb-39be7c75ebdb,Josephine Rodriguez,2023-02-09,canned fruit
+dfe261cf-7bdc-4825-adb1-19aad7eceb59,Gloria Mitchell,2023-07-24,decalcifier
+b8714318-acbe-4a18-8f93-b066a21c9cf3,Sherry Venturelli,2023-06-09,cooking chocolate
+198a64b0-6c27-4282-971d-9a7c22228984,Norris Lawrence,2023-07-26,butter
+b4b233b4-5f5c-40e4-b415-3b8224eb983a,Norma Plotts,2023-09-15,meat
+87b2cd7c-8bd2-4b27-84fd-d93af7a6711e,Pearlie Dinh,2023-05-25,semi-finished bread
+197ec346-a60c-4c54-a8d5-324d90750e3a,Ian Bezio,2023-07-26,domestic eggs
+25666524-43df-4fac-8650-108deea6e94a,Pamela Ortega,2022-12-16,chocolate marshmallow
+5da19201-86c9-4013-8538-934f2dcf32f5,Judy Mahraun,2023-08-27,dessert
+5a210bd6-58d6-451e-b334-97e28cd60813,Alex Arnold,2023-06-25,frozen meals
+45ff762e-6a97-4ddc-8ab1-7648139f3b8a,Gary Buttrey,2023-09-18,frozen vegetables
+022439cf-c945-4540-b120-3fd04fa6d2eb,Lola Mcelyea,2023-09-07,canned beer
+66ea2dd8-a758-4004-a3cf-7b0989ea40f2,Latrisha Diaz,2023-02-22,dental care
+237e4f3f-92bc-4e92-9766-1c0d0e74e1b1,Ruth Sutherland,2023-09-08,dishes
+d4c83cac-fe5e-4e81-a2f4-a81b5a0f53b2,Angela Barmore,2022-11-15,jam
+60068f7f-2332-4383-9ffc-e249e7dd7644,Frank Fletcher,2023-08-21,rice
+4f5f8ace-b268-487f-9826-453703c7af92,Santos Marlett,2022-12-22,hard cheese
+44ab7c46-7e6a-4172-a324-afd09b1c9859,Theron Arlington,2022-11-17,fish
+0bc4482f-378d-44fa-a052-b44e9b324da5,Melissa Kennedy,2023-07-17,roll products 
+98658978-7b71-45ca-80f5-601cd41fd5ae,Velda Wahlen,2023-03-18,chocolate marshmallow
+38493aa4-a284-4bd8-8961-b463d3f11796,Jason Belanger,2023-10-23,misc. beverages
+f1a1f920-34f8-4f83-b8a9-90c54ed20667,Terry Christian,2023-09-09,pip fruit
+0c953a46-1897-4596-a6ba-f3047881efbc,Sandy Nicholson,2023-03-23,light bulbs
+683f830e-c6c2-4371-ad58-64fcae745446,Wanda Creveling,2023-08-24,liver loaf
+7d4d3561-7541-47b0-9d5f-7f51b0e0a91c,Becky Boysen,2023-06-13,jam
+19c04f8c-67cd-40ee-a255-e41bfbec456c,Carol Gallegos,2022-11-12,chewing gum
+f1bfa3ed-ac54-4102-877d-ac5e02c5ec97,Janine Johnson,2022-12-22,root vegetables
+4a1ce2e6-1375-4f65-80d9-3a64a58449be,Betty Stanley,2023-02-15,specialty vegetables
+37ec2ca3-f333-4110-bf06-f08e7c65f878,Marina Webster,2023-10-10,Instant food products
+be3bda06-ebd1-4eff-8acd-b53a3c19a4b9,James Myers,2023-08-20,canned beer
+089446b9-cc76-44a3-b701-60f676962724,Richard Maland,2023-04-25,salad dressing
+bef29cce-5561-4db4-a252-eb6e7cb10dc4,Gregory Chappell,2023-03-14,house keeping products
+5d723fe3-dbf4-4dbe-ae8b-6c1798af551a,Lori Bretthauer,2023-07-16,organic products
+d40eeb70-49d7-4f77-98b1-eca0d91568e8,Katharina Hendrick,2023-04-07,baking powder
+738038a4-a9b2-4703-9a47-7e686c6a6221,Amber Winner,2023-06-22,brandy
+4e807fe1-a4b4-4b9f-9f20-c64afcfeb1bd,Tiffany Roberts,2023-10-05,rice
+5b58832c-42bf-47c5-ba8e-e31aa7db5130,Michael Contreras,2023-10-04,oil
+4c181cd5-a909-414d-ad53-244893f15cbc,Luis Cruz,2023-08-16,curd cheese
+882849a4-668a-4849-a8af-3e8b1003e292,Jerome Crawford,2023-03-05,whipped/sour cream
+a5d61801-dbec-432a-9258-c9b267902848,Janice Wells,2023-01-20,butter milk
+0408eb05-811d-4bf6-a500-a69769bfc5d0,Jeanne Robbins,2023-08-10,decalcifier
+5bea4bf4-32d2-4305-b6ff-feb9b6cd3a5c,Mark Wegener,2023-08-31,baking powder
+814e278b-e70c-4ff1-9eb7-0e2641e02e35,Ronald Lampman,2023-06-24,condensed milk
+24bde017-00fb-4b33-9591-28e5e4f179df,Connie Brandt,2023-03-18,seasonal products
+e73d4eff-f837-4490-99cb-4baabd179f22,Robert Grant,2023-02-08,tidbits
+6dd25126-9871-4f64-a284-18aaf3f51d4c,Jonathan Owens,2023-04-10,soda
+2ecb6d06-2c2b-44ac-bd21-0969620c0d03,Jane Biles,2023-03-03,nuts/prunes
+2d4260cd-d219-4564-9f2a-323b49a95afe,Robbie Gonzalez,2023-03-10,sauces
+a43ec822-aa2a-4f4b-9c54-e3be6a22cd08,Rhonda Cantara,2023-02-28,beverages
+24589f93-074d-4311-ae53-7f2d49ba5315,Heriberto Huether,2022-12-15,kitchen utensil
+eede9cd6-1141-47ea-af1c-d9905af4d712,Sherry Hurrell,2022-12-15,vinegar
+a979ac94-46f6-49ab-b59b-f229974bfa72,David Dicks,2023-02-18,frozen fruits
+4896354a-78a9-4a03-b176-6af335dc9192,James Groh,2023-01-21,specialty cheese
+6d431e6d-2982-4323-80a1-173600430fff,Denise Hart,2023-10-13,ketchup
+7ad9c09c-687f-407a-b25f-1ac038e97fae,Thomas Dunn,2023-04-28,toilet cleaner
+a2a2c26d-db48-4664-a25f-45fe5efdb497,Charles Muney,2023-05-27,red/blush wine
+e32ef2d4-60de-466d-bfae-310ed3b9dddb,Alma Turner,2022-12-06,cleaner
+5302d55d-60cb-4bac-b0d5-62b2f88e0d62,Adria Mcgregor,2023-10-09,oil
+f933034b-7ebe-4fe5-92d6-5f387e2ddfa3,Patricia Ortiz,2023-02-23,onions
+d361755d-5a5c-47f0-975e-e0498a4686b0,Dannette Estrada,2023-08-01,spread cheese
+8feb03df-1f28-40e5-b323-f68259136227,David Wells,2023-02-12,candy
+42af1eca-05e3-4469-955c-7b3a1bfa561f,Travis Guzman,2023-02-23,dessert
+eb075369-5b43-4a9f-8f68-52bb653951fb,Josie Seay,2023-03-25,ketchup
+459e3085-3117-4b2c-a493-dbdeabc797a9,Erica Sikorski,2023-03-09,cat food
+2ed03607-4fb6-42c1-af0f-f62870aeb9cf,John Willard,2023-07-14,hygiene articles
+77ed45bf-94f6-4278-a63e-75c8ed716049,Joseph Chou,2023-02-02,pet care
+ee202cf8-d2d3-4fb8-a078-82f3b97ed0af,Janie Mcfarland,2023-04-27,mayonnaise
+16556130-1e44-4181-a825-4fd654d1e88b,Todd Waldrup,2023-10-16,abrasive cleaner
+bf2d2a34-31ad-4b36-a25b-d2c56499c91a,Mark Brashear,2023-04-26,sausage
+dfec2c86-46ca-4295-8439-3427db7d1240,Carmella Yee,2023-09-10,pudding powder
+91e18bc7-8b08-44d7-a483-630d5f035bc0,Natasha Ness,2022-12-06,snack products
+b57be13a-7571-4d27-89e7-c22f90fb3942,Lucille Lockhart,2023-05-02,roll products 
+b35192bb-7956-4bd8-b460-2650864221d3,Dana Santiago,2023-03-17,hamburger meat
+27a417ec-4b3b-430d-a859-680399227a4d,Vincent Cavender,2023-06-22,kitchen utensil
+93f8f1bd-3c93-4ea8-97fd-d4744ad74f56,Rowena Jones,2023-11-06,canned fruit
+d5927ad7-0cad-43f9-bed8-20e57cd018a3,Lauren Craft,2023-10-10,brown bread
+f932d0e7-0b3b-40cb-b5af-374ab4ded8f7,Melinda Ortiz,2022-11-30,tea
+cb5b74b3-ad9e-438d-8b9e-6bd1984e87a1,Brandi Clapham,2023-01-01,root vegetables
+bb555c19-51f1-4642-96ab-0776247b8154,Susan Chun,2022-12-26,specialty vegetables
+06cc0cfe-88f1-49e0-8631-39ced6ec49be,William Pugh,2022-12-18,UHT-milk
+a09d71b7-b35a-4290-8dac-b57f495c6588,Richard Carter,2023-04-22,dental care
+e38f5ef7-4e0f-4a3f-9222-d0f7dfc76a44,Emma Appell,2023-08-08,sauces
+c0c1e5af-f9f7-49e5-8f70-e0d3bbb5aea0,George Spahn,2023-06-02,salad dressing
+730e3e30-783f-4e16-bbca-5f7e88d3aafd,William Steege,2023-05-17,canned fish
+b0e12c8e-4fee-4257-9db2-9a4e2ae99c95,Irma Holmes,2023-07-04,skin care
+a588ed83-4cfd-41f4-9bf2-3e67c95281a7,Linda White,2022-12-16,frozen vegetables
+c3adcbf3-e201-4c38-8cc0-bb05ef59f569,Lindsey Daniel,2023-08-28,grapes
+cdb550df-125f-4418-8ef4-e8e125d09012,Bridgett Phelps,2023-01-11,salt
+f8c8e12c-7e26-40a5-ad84-06fbf4346660,Susan Lopez,2023-03-08,other vegetables
+96ced719-1858-4101-8277-d75a7b0d00d3,Shannon Melugin,2023-09-24,packaged fruit/vegetables
+0c21fa7b-3739-4558-bf47-2ad31607487b,Mildred Stuble,2023-05-12,hamburger meat
+e7fe2ba5-9031-40db-a661-b0dbcd8b341a,Thomas Schaming,2023-03-01,specialty vegetables
+b50e4869-8c96-4817-96bb-7794aeb41d95,John Dawes,2023-06-16,processed cheese
+a1f7a1a4-eb84-4942-950f-a7a57ab795f8,Evelyn Ellis,2022-12-03,tropical fruit
+684f8ae4-7d8d-41c3-aae1-dae27c14ee4e,Ricky Ray,2022-11-23,jam
+7e57dcb9-8e18-4f95-9f9c-f69e62d0365f,Patrick Sanders,2023-10-14,softener
+ecb6e626-fd25-4e81-92ca-9672f7a0fa67,Nora Mcneil,2023-07-25,rice
+f8dfacbd-5bdb-4fbe-b845-8bf2e43752f1,Dennis Bailey,2023-10-23,nut snack
+079316d3-1f9e-4f02-b8a3-ad8399fdbfb1,Darlene Armstrong,2023-07-02,pasta
+d954b2df-0fa4-4fbe-8e6f-1ae5201903ae,David Glassman,2023-06-08,meat spreads
+63c93df4-a437-4b3a-983e-96f48ab943e1,William Nestor,2023-08-17,butter
+5dc1bb98-d8bf-496f-93ed-aa09754643e5,Bryant William,2023-10-15,artif. sweetener
+f13989a8-36bd-48a8-8ef7-2ff0108a1e71,Jeffery Peralta,2023-02-01,yogurt
+35593dea-58e9-489a-bd2c-8ee631d8530c,Daniel Garretson,2023-05-29,candy
+d1052168-2284-4d71-a244-b6181b33d530,Earl Rodriguez,2023-04-13,make up remover
+eb8c5f15-8151-475a-a799-fc1a6a84764c,Edna Reed,2023-08-11,kitchen towels
+6903465d-b2ed-48b8-b301-666bbb82ddc5,Elva Fortune,2023-02-04,pasta
+899946a7-a2b9-4d4c-a790-d6ba349a7c31,Juan Duggins,2023-04-27,specialty vegetables
+d9372562-e989-48df-b5c8-3674ff57115c,Pearl Fleischer,2023-01-02,yogurt
+52c80869-1d05-4081-aa0c-7757ede53d47,Patricia Coates,2023-02-11,sugar
+dafcacd1-75f1-4186-8262-4829f275a8f5,Joe Ambres,2023-07-11,spread cheese
+a941e3cd-b3f5-458e-8c43-78b374fe92c3,Stephanie Gergen,2023-07-29,spices
+897f6356-9475-45ea-8c05-fa0a1cc62302,Sarah Ceniceros,2023-10-05,frozen potato products
+72fc9f15-3188-4711-a073-9a8b82456249,Darrell Robinson,2023-01-30,meat
+583c8377-6332-4168-a03f-a7dbe076f100,Jocelyn Dutra,2023-10-07,candles
+c3df4924-78ae-43ba-8579-b9d07582cee7,Susan Lewis,2023-02-21,specialty bar
+888e341d-930e-4250-b32a-c21dad93339e,Iva Johnston,2023-10-27,frozen meals
+a94fa9ba-52a3-4817-a01e-7da9b43f77cd,Michael Larrison,2023-01-04,rum
+c972a9ff-17dd-4a21-834b-ee44450f80f9,Robert Grimes,2022-11-29,artif. sweetener
+fdd47c8c-2da2-4666-8929-e66fb2c6f38f,Oscar Liles,2022-11-19,canned vegetables
+64c23d45-0041-4d6d-8beb-b089694df720,John Frisco,2022-11-16,bags
+4d82f950-a9ad-4ba4-ba65-7f1427177d53,Matthew Billinghurst,2023-06-02,specialty cheese
+ec58efca-5eea-4fd8-91cc-9e56984a6132,James Clary,2023-04-27,packaged fruit/vegetables
+c1ea00ae-5367-4a37-9616-0ce295eacfe1,Charles Webster,2023-02-26,softener
+88f37b79-77fb-41b7-a213-e460c9c29123,Keith Woodard,2023-07-09,meat
+38be40ba-2656-4747-bb57-6ecb75946106,Patricia Rodriguez,2022-12-21,white bread
+e990b27d-d949-4dfa-b331-7ba0b2eaa46d,Ray Yazzie,2023-05-11,seasonal products
+37d430dc-098c-4762-a626-aa4ade25fb36,Norman Zimmer,2023-09-04,rubbing alcohol
+80d59b43-ea57-4ebd-b7e9-77f7284120cb,Deborah Conley,2023-09-01,ice cream
+d7c2a2fb-2797-4f41-992a-ea52db856775,Mohamed Morin,2023-03-17,bottled water
+b26c776e-a3f3-4c0d-848d-7dc39361fa1b,Julian Gowen,2023-08-15,white wine
+b1dd0b28-cae4-4e49-9fb7-ef53ec1cfc02,Robert Landfair,2023-09-11,frozen dessert
+fbec1941-261d-4347-beea-fadd714497a3,Wendy Castillo,2023-01-21,canned beer
+a3f72fc8-c1c7-48c5-82d3-a58b2d9a7a4f,Jennifer Esteban,2023-01-17,artif. sweetener
+58d0b302-1cb5-4369-8c74-ef9d2fecd773,Christina Harris,2022-12-11,pudding powder
+a81a1d91-32a8-470c-be06-bf74069c98be,Jo Orozco,2023-07-25,onions
+48a64e98-d4b9-47f6-9ae7-31173b4d75ee,Allan Daniels,2023-01-25,packaged fruit/vegetables
+e7d054b3-76f1-4abb-b3e1-3ca1bd022c7e,Edward Mccurry,2023-02-16,ice cream
+28d3153e-7307-4681-85cd-efe292da0b74,Richard Toborg,2023-03-29,detergent
+a6220597-f11c-4319-9c86-615c7d508139,Eric Bostic,2022-11-16,pet care
+8ce3cd43-5e29-4322-97a7-1733767f2395,Michelle Johnson,2023-10-29,herbs
+8b2497d3-4e04-457d-8baa-558784c370f5,Trudi Looney,2022-11-19,nuts/prunes
+8372048d-46a7-413f-a9e4-9779c6ca8406,Anne Whittier,2023-09-23,male cosmetics
+d78970fc-aca6-4a95-840e-701ba1f68dd7,Edward Krug,2023-02-20,ready soups
+62b85a7e-91a0-412b-9a4f-acc8f54b94e1,Jaunita Metheney,2023-02-20,tropical fruit
+657c1de3-249b-473f-b8ef-2c977382a046,Brenda Person,2023-05-04,whole milk
+997c94ba-756b-4893-bb03-ee72f45221d0,Luis Gorby,2023-06-24,pastry
+e9368ef1-ddb9-4006-a398-3b5541ba442b,Robert Castillo,2023-06-21,meat spreads
+d16b00a4-0a16-42d9-85e5-c310a014b934,Sandra Ortiz,2023-11-06,soft cheese
+c946b0a9-1079-459c-a44b-956bd6978911,Johnnie Cornwell,2023-06-04,dog food
+1c6160e6-94f5-4cc3-88a9-3c34a9f2ce47,Linda Tolar,2023-06-06,pastry
+a0f0d3cb-6166-4a44-b248-9e87c8ca2e08,Christopher Steed,2022-11-17,specialty chocolate
+762a0624-d1ff-496a-b192-192bc5f58bcc,Jean Lyons,2023-10-15,grapes
+ed725393-c401-4459-b302-b490f700e346,Francis Wright,2023-10-29,dishes
+00739386-8465-41ef-8b99-7e167a93bdeb,Donald Ortiz,2023-05-18,cereals
+c32743a4-aac7-4377-9127-0ed0cc507a41,Hazel Clayton,2023-01-29,berries
+72a89146-fa73-4ca8-930d-78d4f66886b7,Lanora Washburn,2023-01-13,ham
+653ce477-ec01-4ea3-a2a5-6d749f6925a9,Eric Daugherty,2023-07-21,butter
+3c043f77-0803-42f3-99f8-1ffeb13b6490,Eddie Mcnally,2023-01-24,hygiene articles
+7d0c2f54-ca87-4104-9f21-5b921f48434c,Jimmie Delgadillo,2023-09-19,frozen chicken
+40ef63c1-89ec-4d91-8e55-ee7b2c091238,Paul Keeler,2023-02-07,other vegetables
+3cd68610-8bff-4b97-a94b-8432a1be663e,Charles Thornton,2023-01-31,finished products
+3cfe707d-318a-4013-8aae-20fa22f5d0b4,Nicholas Lopez,2023-05-02,sliced cheese
+746f7aeb-ffcf-47b4-be5b-bba4ee4fc5c3,Twila Friday,2023-03-16,kitchen towels
+2e2eee97-91f5-47ee-bb21-c25954059dc1,Walter Tucker,2023-02-12,cake bar
+a35cd6b2-29c4-41f5-9fde-b6193b2d9d6e,Richard Coen,2023-10-11,vinegar
+dd5ac971-95d5-4be1-8205-422b29f0d67e,Anne Olinger,2023-07-24,dishes
+84b6919f-42e8-4b05-a5bb-bd09e9e410a9,Sherry Allen,2023-08-03,skin care
+c6805451-cd79-4f06-96d3-3dc7a5b8e79a,Cynthia Patrick,2023-04-04,vinegar
+08dd2e0d-0b7f-4624-bf72-ebf396075d2f,James Ferguson,2023-05-25,female sanitary products
+5e4fcc4a-c9c4-4329-b090-42ef6f554843,Rhonda Rosado,2022-11-13,cake bar
+a9009202-7e13-4df3-b37f-88b7969859d4,Richard Cobb,2022-12-16,meat
+97878f84-bd02-40f0-91ac-28b148273137,Robert Keesee,2023-04-06,cream cheese 
+c23a6db2-c302-4569-a96c-482a1ea3e659,Shawn Vierk,2023-03-03,soda
+14e3c786-71f3-4a5c-a965-73819d77e732,Aileen Watkins,2023-02-18,candy
+f3502f39-14d1-4e09-a1f5-c1680c835987,Eric Hamlin,2023-06-23,herbs
+07dfdd51-02be-4bfb-a081-933fb467bcd0,Naomi Radaker,2023-01-15,UHT-milk
+5003dba3-1593-45af-bedf-7178a9365540,Wayne Burns,2023-07-09,kitchen towels
+13334159-ac35-4164-b1a5-03cc34a63492,Barbara Williams,2023-06-28,curd
+5abc1b7d-9839-42ba-be87-f30a83f791a6,Brittney Seaman,2023-07-07,napkins
+b9b18010-e84f-49b3-83e2-4c32368fe204,Olga Bennett,2023-06-03,cereals
+009178e8-6e10-42d0-96e2-e05a2f0c00a2,Heather Caswell,2023-10-31,condensed milk
+725839bc-7bfd-4a09-a870-f67165e03148,Morris Manor,2023-07-19,chewing gum
+cba76749-8410-45b6-b551-97a695f0f2dc,Dorothy Black,2023-06-27,whipped/sour cream
+0f035e24-f150-4f95-81e5-1fe4cadb576d,Barry Scott,2023-01-02,soft cheese
+95447eb8-9cf4-411e-9d1e-0f63cf1fd605,Keith Albritton,2023-09-17,specialty chocolate
+1d75abff-6080-492d-9b16-504a1c7ad013,Sergio Price,2023-08-09,toilet cleaner
+ade2fe9e-6823-4441-a74a-cbce6bc00183,Rudolph Roberts,2023-09-11,flower (seeds)
+c624ae17-9158-4e74-9bd6-18cb21173fcd,Joshua Scruggs,2023-06-23,brown bread
+5f08657c-22fc-4485-ac41-7746c6123623,Ira Scott,2023-02-08,zwieback
+30c65dc3-5487-4a96-a4a4-ce216e9e0dbc,Mildred Lemmon,2023-03-15,specialty vegetables
+983ce6f3-e541-4d1c-a46f-decc3a089ecd,David Dayton,2023-01-27,jam
+44d7077d-9158-40b6-aaf5-6565f2822f13,Kevin Williams,2023-04-17,decalcifier
+bbd3705e-3a2d-4835-82bd-23fd42dd1862,Amy Clendenen,2023-02-06,bottled water
+9ee7a5d1-40be-4012-a2e0-dcbda3c4affe,Laura Jones,2022-12-02,liquor
+f7147cd3-9a88-4e13-a2ce-a0cec4e80df4,Josefa Wade,2023-02-09,male cosmetics
+2c62c32d-f19e-476f-a6bf-6a67422cf385,Steven Reina,2023-04-15,sausage
+deaa4a05-62e7-4257-b98d-116058131316,John Maddox,2023-04-29,coffee
+3e8df5e9-508a-43d3-a5cd-108be11d8146,Lauren Garcia,2023-03-01,dog food
+cd39d1ed-6db3-4719-99c0-62607b59e2c2,Ruby Bradley,2023-11-01,herbs
+f120a682-8f73-4939-8e44-03d45e44fdf5,Katrina Day,2022-12-17,rice
+3dff55de-d3ec-4135-82c2-ca713675f608,George Mackley,2023-02-23,cream
+ce13f485-b563-4aae-8e11-47d00c35ee77,Joann Weaver,2023-01-26,pork
+0429cf7e-f2fa-4881-a435-3bc767db9983,Arthur Brown,2023-07-25,sausage
+07a940e8-ce66-46a4-aec0-75cc5094a819,Alice Brown,2023-08-26,frozen chicken
+3ada9ab4-41df-414a-84c8-22dbdba72935,Sherry Carabajal,2023-06-26,red/blush wine
+78beaeaa-3b3a-41d4-8d78-68461fd502dd,Marisa Phelps,2022-11-11,snack products
+126f0cfc-4b5e-48d8-9b7c-9d82bd31e520,Christopher Schmig,2022-12-18,spread cheese
+35a895dd-c91d-4752-91c7-b8eeb2472cea,Stanley Malone,2022-12-09,dog food
+2e3836a8-a054-430e-8287-5f7e8484576e,Michael Hinton,2023-04-13,mayonnaise
+38242d46-76e3-4afb-b7f6-ac2c54c04c3e,Margaret Clark,2022-12-28,make up remover
+59c299f1-ffd0-4935-ad9f-d1a126049df3,Violet Kennedy,2023-03-19,grapes
+05b2c42d-5785-40d4-8137-119855ef06e1,Greg Barnard,2023-10-15,chocolate marshmallow
+ebfdd446-fef1-4d42-b7cf-a32cb0f0e4ed,Roseann Geerdes,2022-12-21,margarine
+88492728-d839-4e73-8394-b1fba2b9f98e,Kara Webber,2023-06-06,kitchen towels
+9a2216e0-6ce7-436c-9b8c-1a9e4868badc,Cynthia Ross,2023-07-30,make up remover
+3aa17642-9776-4506-9cae-2ae820713f06,Andrew Burrows,2023-02-24,packaged fruit/vegetables
+6660539c-176c-4906-a41e-5d75b75e3bd5,Doris Dowdy,2023-09-29,fruit/vegetable juice
+27890cd3-0c83-4edf-8033-f6252f9d6a2f,Eric Mays,2023-04-28,mayonnaise
+3ef6db6a-3874-48fe-b513-acf79519d861,Chester Pelland,2023-07-06,sparkling wine
+627ac59d-1375-486c-ba77-6f4f91aad408,Thomas Hernandez,2023-04-17,fruit/vegetable juice
+2b11d51a-78d0-4777-b2c1-ae0ab5065dcf,Thomas Billups,2023-10-22,root vegetables
+92618f40-0b01-4a35-93f5-9b3473a9e7d4,Leonard Smith,2023-02-12,ham
+e0ca3012-7d7b-47c6-a934-b41840a0f354,Wanda White,2023-01-08,oil
+415e094d-7641-4b48-944d-5deee29086f6,Ronald Yarbrough,2023-11-01,cat food
+5e9c5a6b-c7cf-4b4a-a8dd-13a29cc044e3,Rhonda Delahunt,2023-11-02,cookware
+64fc4e7f-5cac-4fd9-a1da-ceee0d2b09da,Willie Meeks,2023-04-30,dish cleaner
+2680b1bb-2ddf-4559-b8c8-7fb55c0eac51,Peter Wesler,2023-09-04,photo/film
+49fb52af-1103-4de4-aff0-8bb78783a5d2,Billy Minjarez,2023-10-05,soap
+a449a454-2095-436f-b480-821e02157bd8,Barry Hatch,2023-04-03,salt
+b964beea-4fd2-488d-a188-ebdb323ed981,Robert Doss,2022-11-13,tidbits
+94596963-2e4c-4fb3-b634-3a522770aab9,Jeffrey Riddle,2023-04-01,baby cosmetics
+7e41d717-5619-45a7-8b2c-2ed675336148,Ileen Robbinson,2023-02-10,decalcifier
+939c1911-68b4-4bf5-b483-9c5cad504672,Thomas Highsmith,2023-08-29,brown bread
+e3a53f6e-7bb1-447b-8dde-9de0c1bccf35,Yan Glaze,2023-03-23,seasonal products
+d19f7709-c969-408c-a308-635f3ee06645,Shayla Zimmerman,2023-02-12,rubbing alcohol
+abd65aca-1d53-4cf6-bbe1-9eb7bc47516b,Mario Gibbs,2023-07-17,pudding powder
+431b4211-05e3-47d2-84ef-a46b6b9d8d8d,Daniel Tinajero,2023-07-19,baking powder
+3a8705ff-cfc2-4975-b25b-0436bd23476b,John Perez,2023-05-09,pastry
+7ec25b05-94ed-4211-aa1d-791b9a41de6c,Jay Huey,2023-01-28,jam
+117871b4-ce01-4cfe-a1a1-64c1a8b0edca,Diana Torres,2023-05-21,cocoa drinks
+3e660fd7-2ea1-4622-814f-d3fdfbfa8bdd,Terrance Royster,2023-01-12,meat spreads
+d3ca743d-b874-48f7-bdfa-58930fd2c629,Theresa Anderson,2023-05-26,berries
+cc340200-f474-4ccb-ae62-1a5bce3efc0d,Ernest Mcroberts,2023-07-17,rolls/buns
+d8369683-e8a0-464f-9c4a-21d2fbb064e3,Troy Thorpe,2023-10-29,organic products
+3a0704a6-83c7-494e-a589-dbc611791196,Amy Middleton,2023-02-14,salty snack
+6518f10b-6850-4cd1-bfd2-88e6628f6ac4,Thelma Coleman,2023-07-22,canned fruit
+c461a7d4-2c31-465d-9310-8747416d11f1,Shirley Soria,2023-03-03,ice cream
+6e9b4f6b-b0ca-49aa-be6e-ddb5f4c87992,Andre Higgins,2023-01-26,chocolate
+3183e4bc-9714-4f2c-a3c9-313a77e9d91a,Robert Collins,2022-11-07,chocolate
+f973360a-0e43-4377-b085-3768efac571f,Julie Beaudette,2023-01-25,pip fruit
+44f3f5c8-ab95-4c6f-8cb2-7ab9f825e68b,Dorothy Hamilton,2023-09-26,flour
+f23edaf0-7e1d-405f-b7dc-094830891efa,James Thomas,2023-02-02,whisky
+ce5db28c-d251-4870-bcee-c5a2ed255674,Elaine Vasser,2023-03-10,female sanitary products
+a2e14ed9-6a6d-4044-8044-117d70d5a214,Sarah Guzman,2023-01-01,white wine
+d508e5e4-c359-427a-8294-a16116b30b58,Robert Brown,2022-12-09,bags
+3e07c67d-040e-4c72-b748-7f4fb4947a95,Hugh Moyes,2023-06-28,soups
+7b36e330-d59f-4142-99f8-75881f794874,Ronald Suarez,2023-07-18,hard cheese
+983d69c4-10da-44ac-8547-a9f58d5a0222,Carlos Michels,2023-10-25,frozen fruits
+7a6bf789-0b51-4966-b12f-76948748f642,Felipe Chase,2023-08-29,salt
+207a2006-28bb-4648-b273-551cc075c22c,Debra Mccormick,2023-07-29,cereals
+2349e3cb-83eb-42fb-9410-4247bf1ffccf,Latanya Wallace,2023-06-21,tropical fruit
+b4d56f26-c485-4490-b9a1-082b1676b79f,Beatrice Diaz,2023-07-19,dessert
+10788270-8c07-49b4-bac0-fc08e55ef0a7,Christopher Ortiz,2023-09-13,abrasive cleaner
+b5332368-6da5-4010-96f4-fd0b7c7137df,Michael Mullins,2023-06-05,spread cheese
+009f5ae4-0afe-43d7-a54d-db738171218e,Alvin Rhudy,2023-07-20,organic products
+e2719e3f-8ae8-41be-9cf2-4189ca53d3f1,Denise Swinford,2023-07-09,mayonnaise
+68c575d9-742a-4609-bff3-863653305915,Charity Coley,2023-10-02,cereals
+c55d1536-9e64-413d-b588-a2455120949d,Lottie Wilson,2023-08-10,citrus fruit
+2e706e6e-78f3-4421-b95a-436bdb52ada0,Andrea Geisler,2023-05-28,cleaner
+9bae2eaa-776c-4082-b470-e011c3244554,Brad Spain,2023-03-24,sausage
+1c7ee973-bfb7-4ea6-aa39-50db3f6b2a7a,Stephen Winkler,2023-09-07,flour
+592a05c3-1e1c-46a4-898e-986a3fc357d8,Chana Baggesen,2023-05-09,margarine
+98baaec9-0a44-4f49-9329-adea3a77a263,Tasha Porche,2023-05-22,berries
+415490c2-eb2b-484d-81e5-97ada01034ae,Patricia Hutzler,2022-11-27,canned vegetables
+9c868664-d593-46d0-a332-988cf3fa9144,Jason Blue,2022-11-11,frozen vegetables
+a7659337-b741-496e-a92d-179c449b8a76,Cynthia Ray,2023-02-16,specialty bar
+232ec5fa-42f5-493f-800b-72baa3791bf3,Mary Harden,2023-02-24,other vegetables
+b1901e77-3c96-4597-8ea4-d45825e5ada4,Ronald Payson,2022-11-18,vinegar
+caaefa4e-3120-43f9-b77f-a44a50b1d42a,Ellen Beard,2022-11-28,herbs
+f5280666-5a60-4b15-b017-efde3d1d2dd8,Joesph Gilliam,2023-02-17,hygiene articles
+200c4fdc-230d-4ac3-9139-cef0193af5b1,Jennifer Aris,2023-02-26,finished products
+5d419c5e-26f2-4ca8-83f2-cee04327ea90,Romeo Eggleston,2023-08-22,bottled water
+cbae61b8-4ced-4f10-b795-ab3a98a732e7,Wendy Golightly,2023-03-09,instant coffee
+e5286c8c-26b0-4889-805f-a721fb6db0ab,David Barnett,2023-06-29,toilet cleaner
+17990b25-3bc6-4ef5-a706-1b9bc0b146ea,Sandra Murphy,2023-03-18,rum
+9f1276fc-f2a8-48f9-9474-058409723c6c,Kevin Lester,2023-03-08,jam
+3d882bc6-d514-49da-a4ee-95912af10565,Glen Manery,2023-06-07,chewing gum
+c5767b29-5fe3-4224-afab-1af37cdec1c7,Maria Brown,2023-04-28,citrus fruit
+f0eeb6cb-5bb1-4066-8331-75111a87856b,Melissa Parilla,2023-08-11,cocoa drinks
+6cad54cc-b26b-49ac-824a-fa2d40b5c75e,Mary Martinez,2023-01-13,butter milk
+7de011e7-6f53-44ec-8b75-87616503f75e,Jessie Ardoin,2022-12-22,specialty cheese
+95bcc101-6509-4ff9-bea6-5d34261bc3dc,Adrian Chastain,2023-03-07,canned vegetables
+f8cb01b4-d795-45ce-93ee-9fcf20670c36,Roberta Lugones,2023-02-14,frozen potato products
+8cedac8f-9caa-46a7-8f2a-aeb215722eba,Vanessa Smith,2022-12-20,cereals
+872a73be-4202-4db0-9bde-c9130f9a103c,Myrtle Lockwood,2023-06-22,detergent
+a971df2a-ef22-4ffc-b89d-44e02b981c33,Ray Field,2023-08-22,cat food
+5920fdef-2a57-4c71-ae03-3ba3f6d7669e,Neil Armstead,2023-06-14,UHT-milk
+93d7c4ea-4619-4732-b624-2d9f47d34652,Marielle Little,2023-06-05,citrus fruit
+2892390e-796f-4f44-a7d4-a39b3a1aeae7,Norman Heflin,2022-12-18,Instant food products
+25fc7a78-ae22-44f6-8d11-cbcfeed8862c,Edna Power,2023-04-13,artif. sweetener
+f9ff9738-3639-4b82-b745-c59cff9920c6,Peggy Schumpert,2023-02-07,pet care
+bdb4fa21-abc1-452f-9480-61ca5c701fe8,Christie Bell,2023-01-05,margarine
+464066d7-3ecc-4f2e-b0d9-aae049ad4e41,Robin Campbell,2023-08-02,salty snack
+68cf211d-8658-4213-99e7-e7bdc0a83eb1,Hazel Gannett,2023-02-20,soups
+3e2119ca-9fc3-4189-87b1-55cb38886ec9,Troy Mabe,2023-06-09,grapes
+3cdad1da-938d-4ddf-bdb2-cff407891cc1,Tabatha Bailey,2023-10-25,ready soups
+c0547699-42a1-41c0-bc64-5618164a81e4,James Jones,2023-01-02,newspapers
+de205e23-5a70-4d1e-a189-12243af30df3,Alice Loy,2023-09-24,light bulbs
+830a6e04-24ca-42ef-bc50-4d13ca6c0a76,Tara Klopfenstein,2023-03-22,jam
+85fd05a1-9325-4a5a-bb54-fd042602000e,Jack Rothrock,2023-09-19,jam
+5cd61a38-5784-49a3-9bda-64db8e11631a,Derrick Spearman,2023-05-10,frozen potato products
+b1cb3e56-27d1-43aa-9ca8-1329fbb97a6b,Vallie Jackson,2023-03-13,beef
+35b43118-5fe9-4313-b28b-36fa5ed715b9,William Toth,2023-08-28,root vegetables
+4218fb8a-7054-41c9-9106-0bd6e077e1d4,Chad Davis,2023-03-04,sausage
+ecdd94bc-e1c9-4ded-9c14-84fbffcd198f,Virginia Justen,2023-04-30,dish cleaner
+298257ba-aceb-42f1-a6a2-5148109b80cd,James Magoun,2023-10-08,flour
+ba2c181c-5b0a-4b4a-bcec-9b9e7deae18e,Junior Reeves,2023-01-05,coffee
+32c41e8d-5f9a-4c48-a631-02459343a24b,Barrie Cook,2023-04-20,honey
+2c6757ef-f744-4d79-8007-d087a025e036,Ivy Wilkinson,2022-11-22,liver loaf
+0a84b749-a7b5-46b4-9665-f3802a805d2b,James Warfield,2022-12-19,rolls/buns
+7689eb1a-6633-4f4d-84d8-b32cb734822a,Allen Clark,2023-03-10,bags
+9bb21345-6c22-4746-ba05-012c4865c332,Jane Carpenter,2023-05-20,chocolate
+630e7595-007d-49d5-8778-7bcc1ec79961,William Miller,2023-07-14,toilet cleaner
+f24e4280-b256-4b32-8601-3c68c32dd3a3,Darryl Martin,2023-03-07,red/blush wine
+27c3c6ae-06e1-499a-9935-7421d07bb9ed,Paula Kepler,2023-09-02,detergent
+df6d089f-9d94-40b5-82c0-022531cc67cb,Jackie Williams,2023-02-17,candles
+4cbef9e1-9b40-49a0-8b08-49878c36917a,Richard Fletcher,2022-11-11,canned vegetables
+b41602a0-ebcf-44e2-b2d6-9de5565fdf62,Gary Chisolm,2023-03-24,liquor (appetizer)
+842a7a23-4ae8-4d00-ba98-fd00f4e5560e,Signe Scheppke,2023-07-26,candy
+eea9c223-7039-4900-9a1b-39e4260f374c,Antonio Harvard,2022-12-30,cocoa drinks
+d9ae4225-b523-45d1-8bc6-ee665357618e,Matthew Cowan,2022-11-15,cleaner
+d93cf1d6-06ef-4c7d-b87c-b483c9584f92,Tina Batts,2023-04-19,soft cheese
+50e51d42-f27a-4c59-915f-9c7ac56f9002,Roland Sumner,2023-03-09,turkey
+b53b6784-6e73-4e34-88c6-233846d426d0,Avelina Morrell,2023-07-28,brown bread
+1ca7e955-5fc3-47fe-984f-8120db7c022c,Henry Herrera,2023-05-09,frozen dessert
+cdd353b5-a851-4bdd-8b9d-dd11c9ee7872,Henry Coutee,2023-03-25,ready soups
+1c055c3f-8a14-4194-980e-6c4168de02a9,Gilbert Blass,2023-10-18,napkins
+e3ec417b-3d0b-41c1-949c-66a6f2f90927,Rose Young,2023-07-18,baking powder
+efd45964-14f2-44e5-9286-60a02022a75d,Josephine Kline,2023-08-30,pot plants
+164760da-2ae8-40e6-82c3-bd54b96555ef,Nathan Zapata,2023-06-06,citrus fruit
+c1283daf-132e-4df8-9f96-aeff53b0f70c,Frank Bolyard,2022-12-13,whole milk
+4e49a494-9a03-411e-b834-8f7b0f06e3e3,Jacob Berg,2023-03-14,preservation products
+ad7706e8-ff83-4798-a5c0-f5bd6d50921b,Alfonso Fulgham,2023-03-09,packaged fruit/vegetables
+e94e49b3-3148-4b87-ae0a-0132842745ed,Ivan Madden,2023-08-27,cat food
+275dfc17-edc0-4157-960f-ecf609eeb71e,Kevin Mcneill,2023-03-02,canned fruit
+3a70644b-d979-4f41-b6e6-464cf4538653,Benjamin Durrance,2023-09-01,frankfurter
+08e467cd-2598-4142-871e-362fda15a410,Esperanza Delong,2023-03-02,domestic eggs
+6af02d29-2bc6-45af-b7d8-1fdf35b96f55,Janel Jones,2022-12-25,herbs
+0c20e3d3-a5dc-4fc6-86ce-a00ab906eb69,Irene Lyell,2023-07-18,cereals
+62114c64-a068-4fa0-92cc-9aa4b59debf9,Lisa Hadnot,2023-01-22,root vegetables
+a30d5858-e97d-4e00-8446-4df75618daa3,Carol Savage,2023-10-16,pork
+5e803ead-cf42-445d-acb2-e5809b089e25,William Barrentine,2023-01-14,butter milk
+e25ba500-1313-41dc-a81c-f508cef9cce9,Pamela Cox,2023-05-29,white wine
+030b83f7-8a59-48e8-a7b5-54d459d583df,John Ford,2023-03-16,nut snack
+4fd33243-d7ee-468e-9488-d69d019c31a5,Joy Burdett,2023-07-20,oil
+ca9aca5b-7e86-4cbc-8720-7cf8e184b52a,Tiffany Cooper,2023-07-17,liquor
+b996c7c8-3d20-4fb8-a5c6-1ecadd75e424,Minnie Kostrzewa,2023-09-03,misc. beverages
+799b900e-26c0-4f2f-bf62-88bccec7460f,Donald Tompson,2023-02-25,nuts/prunes
+b22937b0-4592-4863-9728-f795c0e9be7e,Jennifer Kromer,2022-12-09,honey
+8d2a8532-3047-42e0-b10c-a90c53f5f2cc,Jose Beckley,2023-10-02,candy
+369c8679-0254-40dd-90ef-e5dd87b2a5a1,Ronald Williams,2022-12-21,waffles
+353b8b90-4443-4a4b-9b76-44a9beddb3cd,Kimberly Roberts,2022-12-22,cream
+35d3608c-d07f-4506-8a72-b7636132f7bd,Emanuel Tolbert,2022-11-28,pickled vegetables
+2888559d-a6e1-4e23-8b85-4c8f57eea30d,Lewis Halterman,2022-11-22,female sanitary products
+536201f7-063c-4ba9-9f1d-b5d737e41d4f,Hazel Siegrist,2023-07-22,tidbits
+3c9ac7be-3fb1-4dd2-8bb2-4830faf7513b,Daniel Arcangel,2023-08-14,decalcifier
+53b8cc35-2213-4b2c-ae32-abfd13fa1831,Melissa Russ,2023-01-21,chicken
+4633722f-cd7e-4bba-ac22-7b01d71536a2,Myron Priddy,2023-04-22,brown bread
+447516cf-8813-4dfd-b199-0541aff1406e,Vicente Albertson,2022-12-17,baking powder
+527bf123-a047-44a7-9c60-ac543bec2a8f,Jeanine Aliberti,2023-04-06,soap
+cb15cdd3-c0cd-4efe-b373-90da6552943d,Sean Vanderlinde,2023-02-11,margarine
+2b65d22e-0c22-4217-913e-c1ef04e01da3,Barbara Copeland,2023-09-18,shopping bags
+d6516763-6b74-4266-bad9-67d2a4e4242f,Mary Oconnor,2023-04-20,frozen potato products
+8935d0ec-c0f4-4e1a-9024-1c816f3f79d9,Natalie Samson,2023-04-24,kitchen towels
+3829d594-f82c-443f-a94f-6232be288333,Mary Mcdaniel,2023-04-21,pickled vegetables
+ff40e28d-5331-4e5c-ba43-36fd0542b211,Amy Combs,2023-05-22,preservation products
+95669db5-73c3-43f5-83fe-bee32a42156f,Bridgette Ruckman,2023-04-15,artif. sweetener
+2a29ac99-8145-4fe6-bcc5-47de93d0fba7,Karen Householder,2023-06-10,roll products 
+868ee94a-b821-4a79-b16e-5991ccead70e,Thelma Jones,2023-04-01,bottled water
+4bde4e76-b358-43f7-a834-e6087b845650,Michael Bouchard,2023-01-29,instant coffee
+592902a6-f142-4e03-9816-6521c96c3ed1,Jody Fender,2023-03-23,vinegar
+6d1be544-610b-46c5-9db9-97160c065fba,Joe Oelschlaeger,2023-08-27,red/blush wine
+bd23bb53-7d48-4669-8584-1c36ceb6bfc6,Ava Watt,2023-07-05,chocolate
+bc489ae7-7ec7-4feb-b3c1-781e661b2dc5,Richard Lyons,2023-08-13,syrup
+c26dcb81-d8c7-42f0-bcba-0e665c126b31,Matthew Newberg,2023-08-15,canned fruit
+a910dba7-8733-43fe-871b-60b1856d0037,Abby Schroeder,2022-11-14,frozen potato products
+2718ddd7-8ca1-47a5-acf6-547fdcf26a92,Aleen Wright,2023-04-08,instant coffee
+ca76b912-d8a7-498c-a70f-7ed02d0a1fdb,Jan Schmitz,2022-12-18,photo/film
+a71466ca-b8ba-4c73-a842-ce128a9bfecf,Ethel Simar,2023-05-09,kitchen towels
+ed966d49-c669-4e62-ba36-555902c7cf1d,Laura Robinson,2022-12-14,seasonal products
+23c6de87-22b1-466f-9aa2-890545f4c592,Caroline Berry,2022-12-08,ketchup
+304cbb69-2fa5-4058-902d-f1ce6086918e,Jennifer Cargile,2022-11-19,chicken
+006529cc-a013-4372-8a7c-caad38acb046,Joanne Randolph,2022-12-31,napkins
+f6fe523c-5016-4471-bc40-bf63c50b857a,Nickie Louis,2023-07-19,softener
+c1975527-5c73-4e49-9f21-a3b620c84acb,Melanie Mrozinski,2023-10-14,spread cheese
+5a6159dd-a9d8-4e30-8828-660fbc2e2af5,Jane Sanchez,2023-04-27,kitchen utensil
+6845b772-d7f9-490c-a2b5-ade18a70ae4c,Juan Sanders,2023-08-02,rum
+e6f5b9ae-0085-4c26-8210-a30623eb963e,Charles Eddings,2023-10-03,bottled water
+b193f4cd-9acf-40f6-b1c0-7e57a505ecb8,Tom Murdock,2023-09-29,brandy
+86539349-8f1e-434f-8e9a-195c02af5ddf,Ira Sheets,2023-07-23,hard cheese
+206a52a7-6164-45a7-b0d4-c05baf04979a,Sheila Johnson,2023-01-02,toilet cleaner
+e8c3441d-2e1f-4295-b260-84807fb1fc51,Jerome Lenard,2023-02-12,mayonnaise
+ecaf030e-605a-4f79-9e20-4cd3b24286ae,Laura Right,2023-07-23,syrup
+df7d8913-68da-4ab3-b07e-5a6849e81ad6,Michelle Murphy,2022-12-17,tea
+89fece62-b981-43f1-a7f0-a8332272c94e,Patricia Murray,2023-09-12,rum
+0c45e5a7-02ac-488c-85d6-6f548a829214,Howard Mitchell,2022-12-03,salty snack
+34255ff5-7929-4b9c-84bc-f916d156402e,Jack Cervera,2022-12-07,cookware
+87ee531e-f129-472b-8cc8-06bff9763a0f,Henry Medina,2023-09-29,flower (seeds)
+1ab0b7af-7fb0-48a1-93ee-752d8edc718d,Patricia Flood,2022-12-04,specialty fat
+ca198b2f-7263-464c-b666-8b4b30999989,Wayne Taylor,2023-08-24,margarine
+c8ffd439-d82e-48d3-9dd7-22d463bfd552,Joey Bussell,2023-03-28,liquor
+07a68a38-d875-405f-8621-f59c9231e2e2,Dorothy Wright,2023-09-27,cleaner
+78dcfb72-05ed-4d92-b6b3-2f56053bcf5f,Harold Coleman,2023-06-17,yogurt
+29027011-225a-419c-92ae-85ea2c64bfc9,Evelia Cooper,2023-07-17,liquor (appetizer)
+ea97d127-6651-4ecb-9c8b-ad32032384dc,Lloyd Lima,2023-06-10,prosecco
+cf266fa1-0ea7-4433-91b8-d7588ece2420,Kenneth Barragan,2023-02-17,meat
+a57492bc-20f4-4547-a809-a7a3c01b25c4,Helena Uttley,2023-07-05,potato products
+53eb45ab-720f-41dd-ba55-1fd95e95fc9b,Theodore Taylor,2023-04-26,candy
+85232bd3-3a1b-4e36-9c3f-f34a2052f0aa,Helen Monaghan,2023-10-15,specialty chocolate
+7c499aec-cab8-4618-bb60-dfa4be28df8e,Tamara Derr,2022-12-13,cat food
+351f25e1-ac3f-40b9-b277-03f1592a447c,Irene Bettis,2023-09-10,softener
+bedc173b-3745-4b6a-bbf2-2753f845916c,Melissa Burke,2023-10-04,rice
+9728d3e6-c2c0-4dd0-ae02-b142950f7fac,Patricia Lee,2023-10-11,cream
+f7fa87cd-07b7-4bc6-823f-9a5cd63d6029,Pauline Greene,2023-05-07,specialty fat
+be8d4df0-81db-48e9-ab1b-0f240ab1a29c,Robert Armstrong,2023-08-31,pork
+51ff14bf-dd7e-487d-8e6d-f036bcad6f06,Mathew Hayek,2023-07-08,potato products
+db1e7fb9-0d6c-48d2-a593-2ee7462742b2,David Ames,2023-06-08,frozen chicken
+4dbbff0b-d340-4802-b1c8-a37c8edcb3cf,Anna Hendon,2022-11-10,baby cosmetics
+a14cdd20-233b-44c2-ba82-e183a5578685,James Colvin,2023-03-25,photo/film
+fbb0a1d3-0353-4e8d-be3e-91acb2047655,Ronny Leake,2023-07-01,specialty vegetables
+cd192fb7-bf61-4d57-8694-a09c781a480f,James Ingram,2023-04-07,decalcifier
+1fa2f6e7-75f4-48f3-9964-d90723bcc36b,Kenneth Fuller,2023-10-02,make up remover
+a4cacea3-9b78-41cd-ba0b-26bebca39f8f,Wilmer Wright,2023-03-21,chocolate marshmallow
+f7aad7a6-fbdf-4e9f-a25e-c42d1daacce1,Courtney Perez,2023-07-29,tea
+7f7d4a85-2bc9-45b8-9839-b1daff88c3cd,Jeffrey Morrone,2022-11-24,specialty chocolate
+33cf4e82-e77d-4c5e-8d19-10b47cb7d248,Ossie Hinson,2023-06-04,packaged fruit/vegetables
+0f6b3ffd-389d-46ff-bdea-fc5bf32616a4,John Lewis,2022-12-17,syrup
+d8f15abe-6825-496d-8559-52e0e321aaa1,Brian Cromer,2022-12-08,bags
+c95c555e-14b9-493f-8e44-268b066ef053,Gilbert Starnes,2023-05-21,photo/film
+896522d6-7d3b-4039-ba6a-66064067fd76,Jenny Galdames,2023-05-08,softener
+2d1cf6e1-2ea5-483a-bc00-cf3be038c054,Chelsea Davis,2023-06-30,butter
+d3e3c45d-3785-4500-995a-266eab36bfac,Frank Barrett,2023-02-03,mayonnaise
+cf9885d6-b9aa-4d6d-b6ac-c3fc16ab510c,Sonya Bell,2022-12-24,beef
+5f814d98-c370-4f99-a1a5-2510779df87a,Brenda Wilson,2023-04-19,softener
+2f5d2570-c976-4ee0-bbd0-315c6891d489,Heather Lunt,2023-04-24,sliced cheese
+b519c6be-2349-4f2f-aace-a243d4a684c4,Vera Oshea,2023-09-26,waffles
+c624ae17-9158-4e74-9bd6-18cb21173fcd,Joshua Scruggs,2023-03-29,pet care
+2af22cbb-9cf0-48aa-a8d1-347c475f19c5,Jack Taylor,2023-07-10,UHT-milk
+de6fc564-4863-49a6-8d8d-7c6e37943ceb,Mark Soldner,2023-07-15,dog food
+d93976f0-d0a9-4e21-add5-6d7211dcaacf,Dixie Lothridge,2023-10-05,cream cheese 
+295bb31b-1c3a-40f7-8146-ddcf65ef0050,Tony Taylor,2023-08-03,hygiene articles
+e88ca6f0-ec38-41f4-a549-35431ee93d1f,Deborah Johnson,2023-01-19,soap
+466152d8-005e-4989-a571-fa080a878480,Morton Jara,2022-12-23,pip fruit
+1d19c5c1-dd6d-4e59-9af3-2c9d153df5a4,Linda Flowers,2023-04-21,sausage
+42ccc6dd-db73-410d-8695-b28f72ed5bf5,Dorothy Oddi,2023-08-29,cream
+8f48cc0f-e718-4250-ada3-eb9e95e03593,Rebecca Goss,2023-03-20,pet care
+6a8d1c11-3990-437b-8ea7-010d77b09918,Christopher Moore,2023-03-13,organic products
