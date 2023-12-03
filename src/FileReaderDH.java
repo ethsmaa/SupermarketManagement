@@ -11,7 +11,7 @@ public class FileReaderDH {
         this.fileName = fileName;
     }
 
-    AbstractHashTable<Purchase> readSupermarket() {
+    DoubleHashingHashTable<Purchase> readSupermarket() {
         DoubleHashingHashTable<Purchase> map = new DoubleHashingHashTable<>();
 
 

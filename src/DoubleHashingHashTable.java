@@ -1,5 +1,4 @@
-public class DoubleHashingHashTable<T> extends AbstractHashTable<T> {
-
+public class DoubleHashingHashTable<T> implements HashTable<T> {
 
     protected final static int TABLE_SIZE = 1000000;
 
@@ -10,7 +9,6 @@ public class DoubleHashingHashTable<T> extends AbstractHashTable<T> {
             table[i] = null;
     }
 
-    // hash function for string
     public int hashFunction(String key) {
         int hash = 0;
         for (int i = 0; i < key.length(); i++)
@@ -18,6 +16,7 @@ public class DoubleHashingHashTable<T> extends AbstractHashTable<T> {
         return hash;
     }
 
+    @Override
     public T get(String key) {
         int hash = hashFunction(key);
 
@@ -34,6 +33,7 @@ public class DoubleHashingHashTable<T> extends AbstractHashTable<T> {
         return null;
     }
 
+    @Override
     public void put(String key, T value) {
         int hash = hashFunction(key);
 
@@ -49,35 +49,28 @@ public class DoubleHashingHashTable<T> extends AbstractHashTable<T> {
         }
     }
 
-
     public int doubleHashFunction(String key, int time) {
         int prime = 31;
         int hash1 = key.hashCode() % TABLE_SIZE;
         int hash2 = prime - (key.hashCode() % prime);
 
         int index = (hash1 + time * hash2) % TABLE_SIZE;
-        // index'i kontrol et
         if (index < 0) {
-            index = (index + TABLE_SIZE) % TABLE_SIZE; // Negatifse düzelt
+            index = (index + TABLE_SIZE) % TABLE_SIZE;
         }
 
         return index;
     }
 
-
     @Override
     public void print() {
-
-
         for (int i = 0; i < TABLE_SIZE; i++) {
             if (table[i] != null) {
                 Purchase purchase = (Purchase) table[i].getValue();
-
                 System.out.printf(" %d transaction found for %s %n", purchase.getListOfProdcuts().size(), purchase.getName());
                 purchase.getListOfProdcuts().print();
             }
         }
-
-
     }
 }
+

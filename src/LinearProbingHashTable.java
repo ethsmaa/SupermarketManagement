@@ -1,5 +1,4 @@
-public class LinearProbingHashTable<T> extends AbstractHashTable<T> {
-
+public class LinearProbingHashTable<T> implements HashTable<T> {
 
     protected final static int TABLE_SIZE = 1000000;
 
@@ -10,7 +9,6 @@ public class LinearProbingHashTable<T> extends AbstractHashTable<T> {
             table[i] = null;
     }
 
-    // hash function for string
     public int hashFunction(String key) {
         int hash = 0;
         for (int i = 0; i < key.length(); i++)
@@ -18,6 +16,7 @@ public class LinearProbingHashTable<T> extends AbstractHashTable<T> {
         return hash;
     }
 
+    @Override
     public T get(String key) {
         int hash = hashFunction(key);
 
@@ -34,32 +33,25 @@ public class LinearProbingHashTable<T> extends AbstractHashTable<T> {
         return null;
     }
 
+    @Override
     public void put(String key, T value) {
         int hash = hashFunction(key);
 
         while (table[hash] != null) {
-            hash = (hash + 1) % TABLE_SIZE; // linear probing: increment by 1 until empty slot is found
+            hash = (hash + 1) % TABLE_SIZE;
         }
 
-        table[hash] = new HashEntry<T>(key, value); // Bu satır eklendi
+        table[hash] = new HashEntry<T>(key, value);
     }
-
 
     @Override
     public void print() {
-
-
         for (int i = 0; i < TABLE_SIZE; i++) {
             if (table[i] != null) {
                 Purchase purchase = (Purchase) table[i].getValue();
-
                 System.out.printf(" %d transaction found for %s %n", purchase.getListOfProdcuts().size(), purchase.getName());
                 purchase.getListOfProdcuts().print();
             }
         }
-
-
     }
-
-
 }

@@ -11,7 +11,7 @@ public class FileReaderLP {
         this.fileName = fileName;
     }
 
-    AbstractHashTable<Purchase> readSupermarket() {
+    LinearProbingHashTable<Purchase> readSupermarket() {
         LinearProbingHashTable<Purchase> map = new LinearProbingHashTable<Purchase>();
 
 

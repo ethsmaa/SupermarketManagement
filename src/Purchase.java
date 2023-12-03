@@ -55,13 +55,6 @@ public class Purchase {
 
 
 
-
-
-
-
-
-
-
     public Object getName() {
         return name;
     }

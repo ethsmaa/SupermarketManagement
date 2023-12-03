@@ -17,13 +17,6 @@ public class Main {
         System.out.println("---");
         DOUBLEhashMap.print();
 
-
-
-      // FileReader customerFile = new FileReader("customer_1K.txt");
-       // customerFile.customerReadandParse(LINEARhashMap);
-
-
-
     }
 
 
