@@ -10,6 +10,8 @@ public abstract class AbstractFileReader {
 
     protected abstract HashTable<Purchase> createHashTable();
 
+
+    // buradaki fonksiyon supermarket_dataset_5.csv dosyasını okuyup, hash map oluşturuyor
     public HashTable<Purchase> readSupermarket() {
         HashTable<Purchase> map = createHashTable();
 
@@ -57,6 +59,8 @@ public abstract class AbstractFileReader {
         return map;
     }
 
+
+    // buradaki fonksiyon customer_1K.txt dosyasını , hashmapte arayıp bulduğu müşterileri ekrana yazdırıyor.
     public void customerReadandParse(HashTable<Purchase> hashMap) {
         try {
             File myObj = new File("customer_1K.txt");
@@ -73,6 +77,8 @@ public abstract class AbstractFileReader {
         }
     }
 
+
+    // bu fonksiyon ne ise yariyodu aq
     public void searchAndPrint(String id, HashTable<Purchase> hashMap) {
         Purchase purchase = hashMap.get(id);
 
