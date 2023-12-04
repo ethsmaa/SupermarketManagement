@@ -50,16 +50,10 @@ public class DoubleHashingHashTable<T> implements HashTable<T> {
     }
 
     public int doubleHashFunction(String key, int time) {
-        int prime = 31;
-        int hash1 = key.hashCode() % TABLE_SIZE;
-        int hash2 = prime - (key.hashCode() % prime);
-
-        int index = (hash1 + time * hash2) % TABLE_SIZE;
-        if (index < 0) {
-            index = (index + TABLE_SIZE) % TABLE_SIZE;
-        }
-
-        return index;
+        int hash = 0;
+        for (int i = 0; i < key.length(); i++)
+            hash = (31 * hash + key.charAt(i)) % TABLE_SIZE;
+        return time * (TABLE_SIZE - (hash % TABLE_SIZE));
     }
 
     @Override
