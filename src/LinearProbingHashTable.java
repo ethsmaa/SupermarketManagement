@@ -46,6 +46,7 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
 
     @Override
     public void print() {
+
         for (int i = 0; i < TABLE_SIZE; i++) {
             if (table[i] != null) {
                 Purchase purchase = (Purchase) table[i].getValue();
@@ -54,4 +55,11 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
             }
         }
     }
+
+    @Override
+    public boolean contains(String key) {
+        return get(key) != null;
+    }
+
+
 }

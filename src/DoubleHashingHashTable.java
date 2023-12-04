@@ -72,5 +72,10 @@ public class DoubleHashingHashTable<T> implements HashTable<T> {
             }
         }
     }
+
+    @Override
+    public boolean contains(String key) {
+        return get(key) != null;
+    }
 }
 

@@ -7,7 +7,6 @@ public class Main {
         FileReaderLP purchaseFile = new FileReaderLP("supermarket_dataset_5.csv");
         LinearProbingHashTable LINEARhashMap = (LinearProbingHashTable) purchaseFile.readSupermarket();
 
-
         FileReaderDH purchaseFile2 = new FileReaderDH("supermarket_dataset_5.csv");
         DoubleHashingHashTable DOUBLEhashMap = (DoubleHashingHashTable) purchaseFile2.readSupermarket();
 
