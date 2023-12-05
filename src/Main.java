@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        FileReaderLP purchaseFile = new FileReaderLP("supermarket_dataset_5.csv");
+        FileReaderLP purchaseFile = new FileReaderLP("supermarket_dataset_50K.csv");
 
 
         LinearProbingHashTable LINEARhashMap = (LinearProbingHashTable) purchaseFile.readSupermarket();
 
 
-
+        LINEARhashMap.print();
 
         /*
         // customer read and parse
