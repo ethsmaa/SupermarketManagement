@@ -1,7 +1,9 @@
 public class LinearProbingHashTable<T> implements HashTable<T> {
 
     protected final static int TABLE_SIZE = 1000000;
-
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_RED_BACKGROUND = "\u001B[45m";
+    public int linearProbingCollisions = 0;
     protected HashEntry<T>[] table = new HashEntry[TABLE_SIZE];
 
     public LinearProbingHashTable() {
@@ -39,6 +41,7 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
 
         while (table[hash] != null) {
             hash = (hash + 1) % TABLE_SIZE;
+            linearProbingCollisions++;
         }
 
         table[hash] = new HashEntry<T>(key, value);
@@ -52,6 +55,9 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
                 Purchase purchase = (Purchase) table[i].getValue();
                 System.out.printf(" %d transaction found for %s %n", purchase.getListOfProdcuts().size(), purchase.getName());
                 purchase.getListOfProdcuts().print();
+                System.out.println(ANSI_RED_BACKGROUND+"It belongs to Linear Probing"+ANSI_RESET);
+                System.out.println("Number of Collisions: " + linearProbingCollisions);
+                System.out.println();
             }
         }
     }

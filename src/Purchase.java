@@ -17,7 +17,7 @@ public class Purchase {
         listOfProdcuts.sort();
     }
 
-    public void sortLinkedList(LinkedList listOfProducts) {
+   /* public void sortLinkedList(LinkedList listOfProducts) {
         for(int i = 0; i < listOfProdcuts.size(); i++) {
             // for each element for listOfProducts
             for(int j = 0; j < listOfProdcuts.size(); j++) {
@@ -50,6 +50,8 @@ public class Purchase {
             }
         }
     }
+
+    */
 
 
 

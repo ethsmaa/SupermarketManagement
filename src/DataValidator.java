@@ -7,7 +7,7 @@ public class DataValidator {
                 arrOfId[2].length() != 4 ||
                 arrOfId[3].length() != 4 ||
                 arrOfId[4].length() != 12) {
-            throw new ValidationException("Id format is wrong");
+            throw new ValidationException("Id format is wrong, user id must be 36 characters");
         }
     }
 
@@ -28,4 +28,6 @@ public class DataValidator {
             throw new ValidationException("Date cannot be negative");
         }
     }
+
+    // date hakkında daha çok error --12-12-23-
 }

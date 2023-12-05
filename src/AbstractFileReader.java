@@ -88,5 +88,11 @@ public abstract class AbstractFileReader {
             System.out.printf(" %d transaction found for %s %n", purchase.getListOfProdcuts().size(), purchase.getName());
             purchase.getListOfProdcuts().print();
         }
+
+
+
+
+
+
     }
 }
