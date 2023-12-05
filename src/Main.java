@@ -5,17 +5,21 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         FileReaderLP purchaseFile = new FileReaderLP("supermarket_dataset_5.csv");
+
+
         LinearProbingHashTable LINEARhashMap = (LinearProbingHashTable) purchaseFile.readSupermarket();
 
-        FileReaderDH purchaseFile2 = new FileReaderDH("supermarket_dataset_5.csv");
-        DoubleHashingHashTable DOUBLEhashMap = (DoubleHashingHashTable) purchaseFile2.readSupermarket();
 
 
 
-        LINEARhashMap.print();
-        System.out.println("---");
-        DOUBLEhashMap.print();
+        /*
+        // customer read and parse
+        FileReaderLP customerFile = new FileReaderLP("customer_1K.csv");
+        customerFile.customerReadandParse(LINEARhashMap);
 
+
+        // BU KISIM 1Kli customerdan search yapılırken cagırılacak
+         */
     }
 
 

@@ -1,8 +1,12 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.LinkedList;
 import java.util.Scanner;
 public abstract class AbstractFileReader {
     protected String fileName;
+
+
+
 
     public AbstractFileReader(String fileName) {
         this.fileName = fileName;
@@ -13,6 +17,7 @@ public abstract class AbstractFileReader {
 
     // buradaki fonksiyon supermarket_dataset_5.csv dosyasını okuyup, hash map oluşturuyor
     public HashTable<Purchase> readSupermarket() {
+
         HashTable<Purchase> map = createHashTable();
 
         try {
@@ -25,6 +30,7 @@ public abstract class AbstractFileReader {
                 String[] arrOfStr = data.split(",");
 
                 String userId = arrOfStr[0];
+
 
                 DataValidator.validateUserId(userId);
                 DataValidator.validateUserIdLength(userId);
@@ -67,7 +73,13 @@ public abstract class AbstractFileReader {
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String id = myReader.nextLine();
-                searchAndPrint(id, hashMap);
+
+                long startTime = System.nanoTime();
+                hashMap.contains(id);
+                long endTime = System.nanoTime();
+                long duration = (endTime - startTime);
+
+                System.out.println("Time elapsed: " + duration + " nanoseconds");
             }
 
             myReader.close();
@@ -89,4 +101,7 @@ public abstract class AbstractFileReader {
             purchase.getListOfProdcuts().print();
         }
     }
+
+
+
 }

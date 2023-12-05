@@ -9,11 +9,19 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
             table[i] = null;
     }
 
-    public int hashFunction(String key) {
+    public int hashFunction(String key) { // PAF bu
         int hash = 0;
         for (int i = 0; i < key.length(); i++)
             hash = (31 * hash + key.charAt(i)) % TABLE_SIZE;
         return hash;
+    }
+
+
+    public int hashFunction2(String key) { // SSF bu
+        int hash = 0;
+        for (int i = 0; i < key.length(); i++)
+            hash += key.charAt(i);
+        return hash % TABLE_SIZE;
     }
 
     @Override
