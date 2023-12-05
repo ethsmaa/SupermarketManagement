@@ -13,6 +13,15 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
         this.table = new HashEntry[capacity];
     }
 
+    // simple summation function
+    public int hashFunction2(String key) {
+        int hash = 0;
+        for (int i = 0; i < key.length(); i++)
+            hash += key.charAt(i);
+        return hash % capacity;
+    }
+
+    // polynomial accumulation function
     public int hashFunction(String key) {
         int hash = 0;
         for (int i = 0; i < key.length(); i++)
@@ -25,13 +34,11 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
         int hash = hashFunction(key);
 
         if (table[hash] != null) {
-            int time = 1;
             while (table[hash] != null) {
                 if (table[hash].getKey().equals(key)) {
                     return table[hash].getValue();
                 }
                 hash = (hash + 1) % capacity;
-                time++;
             }
         }
         return null;
@@ -116,6 +123,14 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
             hash = (31 * hash + key.charAt(i)) % tableSize;
         }
         return hash;
+    }
+
+    private int hashFunction2(String key, int tableSize) {
+        int hash = 0;
+        for (int i = 0; i < key.length(); i++) {
+            hash += key.charAt(i);
+        }
+        return hash % tableSize;
     }
     
 }
