@@ -124,5 +124,13 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
         }
         return hash;
     }
+
+    private int hashFunction2(String key, int tableSize) {
+        int hash = 0;
+        for (int i = 0; i < key.length(); i++) {
+            hash += key.charAt(i);
+        }
+        return hash % tableSize;
+    }
     
 }
