@@ -1,7 +1,7 @@
 public class LinearProbingHashTable<T> implements HashTable<T> {
 
     private static final double LOAD_FACTOR = 0.5;
-    private static final int INITIAL_CAPACITY = 3;
+    private static final int INITIAL_CAPACITY = 10;
 
     private int capacity; // mevcut kapasite
     private int size; // mevcut eleman sayısı
@@ -14,7 +14,7 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
     }
 
     // simple summation function
-    public int hashFunction2(String key) {
+    public int hashFunctionSSF(String key) {
         int hash = 0;
         for (int i = 0; i < key.length(); i++)
             hash += key.charAt(i);
@@ -22,7 +22,7 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
     }
 
     // polynomial accumulation function
-    public int hashFunction(String key) {
+    public int hashFunctionPAF(String key) {
         int hash = 0;
         for (int i = 0; i < key.length(); i++)
             hash = (31 * hash + key.charAt(i)) % capacity;
@@ -31,14 +31,14 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
 
     @Override
     public T get(String key) {
-        int hash = hashFunction(key);
+        int hash = hashFunctionPAF(key);
 
         if (table[hash] != null) {
             while (table[hash] != null) {
                 if (table[hash].getKey().equals(key)) {
                     return table[hash].getValue();
                 }
-                hash = (hash + 1) % capacity;
+                hash = (hash + 1) % capacity; // linear probing
             }
         }
         return null;
@@ -47,10 +47,10 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
     @Override
     public void put(String key, T value) {
         if ((double) size / capacity > LOAD_FACTOR) {
-            resize();
+            rehash();
         }
 
-        int hash = hashFunction(key);
+        int hash = hashFunctionPAF(key);
 
         while (table[hash] != null) {
             hash = (hash + 1) % capacity;
@@ -80,20 +80,19 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
         return get(key) != null;
     }
 
-    private void resize() {
+    private void rehash() {
         int newCapacity = findNextPrime(2 * capacity);
         HashEntry<T>[] newTable = new HashEntry[newCapacity];
 
-        for (HashEntry<T> entry : table) { // table'daki entryler için
+        for (HashEntry<T> entry : table) {  // mevcut table'ı gez
             if (entry != null) {
-                int hash = hashFunction(entry.getKey(), newCapacity); // yeni size'a göre hash değeri hesapla
+                int hash = hashFunctionPAF(entry.getKey(), newCapacity); // yeni size'a göre hash değeri hesapla
                 while (newTable[hash] != null) {
                     hash = (hash + 1) % newCapacity; // mevcut yer doluysa bir sonraki yeri dene
                 }
                 newTable[hash] = entry; // yeni table'a ekle
             }
         }
-
         table = newTable;
         capacity = newCapacity;
     }
@@ -117,7 +116,7 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
         return true;
     }
 
-    private int hashFunction(String key, int tableSize) {
+    private int hashFunctionPAF(String key, int tableSize) {
         int hash = 0;
         for (int i = 0; i < key.length(); i++) {
             hash = (31 * hash + key.charAt(i)) % tableSize;
@@ -125,7 +124,7 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
         return hash;
     }
 
-    private int hashFunction2(String key, int tableSize) {
+    private int hashFunctionSSF(String key, int tableSize) {
         int hash = 0;
         for (int i = 0; i < key.length(); i++) {
             hash += key.charAt(i);
@@ -138,7 +137,7 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
 
         for (int i = 0; i < capacity; i++) {
             if (table[i] != null) {
-                int hash = hashFunction(table[i].getKey());
+                int hash = hashFunctionPAF(table[i].getKey());
 
                 while (hash != i && table[hash] != null) {
                     collisionCount++;

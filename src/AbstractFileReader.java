@@ -4,9 +4,8 @@ import java.util.LinkedList;
 import java.util.Scanner;
 public abstract class AbstractFileReader {
     protected String fileName;
-    protected LinkedList timeList = new LinkedList();
-
-
+    protected LinkedList searchTimeList = new LinkedList();
+    protected LinkedList indexTimeList = new LinkedList();
 
 
     public AbstractFileReader(String fileName) {
@@ -48,6 +47,8 @@ public abstract class AbstractFileReader {
                 Date date = new Date(year, month, day);
                 Product product = new Product(date, productName);
 
+
+                long startTime = System.nanoTime();
                 if (map.get(userId) != null) {
                     map.get(userId).addToLinkedList(product);
                 } else { // first purchase transaction
@@ -55,7 +56,13 @@ public abstract class AbstractFileReader {
                     purchase.addToLinkedList(product);
                     map.put(userId, purchase);
                 }
+
+                long endTime = System.nanoTime();
+
+                long duration = (endTime - startTime);
+                indexTimeList.add(duration);
             }
+            findTotalIndexTime();
 
             myReader.close();
         } catch (FileNotFoundException e) {
@@ -66,6 +73,15 @@ public abstract class AbstractFileReader {
         return map;
     }
 
+
+    // sum of all index time
+    public void findTotalIndexTime() {
+        long total = 0;
+        for (int i = 0; i < indexTimeList.size(); i++) {
+            total += (long) indexTimeList.get(i);
+        }
+        System.out.println("Total index time: " + total);
+    }
 
     // buradaki fonksiyon customer_1K.txt dosyasını , hashmapte arayıp bulduğu müşterileri ekrana yazdırıyor.
     public void customerReadandParse(HashTable<Purchase> hashMap) {
@@ -80,7 +96,7 @@ public abstract class AbstractFileReader {
                 long endTime = System.nanoTime();
                 long duration = (endTime - startTime);
 
-                timeList.add(duration);
+                searchTimeList.add(duration);
             }
 
             findMaxTime();
@@ -96,35 +112,35 @@ public abstract class AbstractFileReader {
         }
     }
 
-    // find max time in timeList
+    // find max time in searchTimeList
     public void findMaxTime() {
-        long max = (long) timeList.get(0);
-        for (int i = 1; i < timeList.size(); i++) {
-            if ((long) timeList.get(i) > max) {
-                max = (long) timeList.get(i);
+        long max = (long) searchTimeList.get(0);
+        for (int i = 1; i < searchTimeList.size(); i++) {
+            if ((long) searchTimeList.get(i) > max) {
+                max = (long) searchTimeList.get(i);
             }
         }
         System.out.println("Max time: " + max);
     }
 
-    // find min time in timeList
+    // find min time in searchTimeList
     public void findMinTime() {
-        long min = (long) timeList.get(0);
-        for (int i = 1; i < timeList.size(); i++) {
-            if ((long) timeList.get(i) < min) {
-                min = (long) timeList.get(i);
+        long min = (long) searchTimeList.get(0);
+        for (int i = 1; i < searchTimeList.size(); i++) {
+            if ((long) searchTimeList.get(i) < min) {
+                min = (long) searchTimeList.get(i);
             }
         }
         System.out.println("Min time: " + min);
     }
 
-    // find average time in timeList
+    // find average time in searchTimeList
     public void findAverageTime() {
         long sum = 0;
-        for (int i = 0; i < timeList.size(); i++) {
-            sum += (long) timeList.get(i);
+        for (int i = 0; i < searchTimeList.size(); i++) {
+            sum += (long) searchTimeList.get(i);
         }
-        System.out.println("Average time: " + sum / timeList.size());
+        System.out.println("Average time: " + sum / searchTimeList.size());
     }
 
 
