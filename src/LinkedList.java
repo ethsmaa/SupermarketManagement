@@ -15,7 +15,7 @@ public class LinkedList {
 
         }
     }
-////epokjıhugyf
+
     public void remove(int index) {
         if (head == null || index < 0) {
             return;

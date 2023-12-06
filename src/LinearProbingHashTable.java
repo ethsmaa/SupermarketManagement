@@ -1,7 +1,7 @@
 public class LinearProbingHashTable<T> implements HashTable<T> {
 
     private static final double LOAD_FACTOR = 0.5;
-    private static final int INITIAL_CAPACITY = 127; // asal olmalı
+    private static final int INITIAL_CAPACITY = 301;
 
     private int capacity; // mevcut kapasite
     private int size; // mevcut eleman sayısı
@@ -132,5 +132,30 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
         }
         return hash % tableSize;
     }
-    
+
+    public int countCollisions() {
+        int collisionCount = 0;
+
+        for (int i = 0; i < capacity; i++) {
+            if (table[i] != null) {
+                int hash = hashFunction(table[i].getKey());
+
+                while (hash != i && table[hash] != null) {
+                    collisionCount++;
+                    hash = (hash + 1) % capacity;
+                }
+            }
+        }
+
+        return collisionCount;
+    }
+
+    public void printCollisionCount() {
+        int collisionCount = countCollisions();
+        System.out.println("Collision Count: " + collisionCount);
+    }
+
+
 }
+
+

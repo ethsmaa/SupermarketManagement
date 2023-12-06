@@ -71,5 +71,27 @@ public class DoubleHashingHashTable<T> implements HashTable<T> {
     public boolean contains(String key) {
         return get(key) != null;
     }
+
+    public int countCollisions() {
+        int collisionCount = 0;
+
+        for (int i = 0; i < TABLE_SIZE; i++) {
+            if (table[i] != null) {
+                int hash = hashFunction(table[i].getKey());
+
+                while (hash != i && table[hash] != null) {
+                    collisionCount++;
+                    hash = (hash + 1) % TABLE_SIZE;
+                }
+            }
+        }
+
+        return collisionCount;
+    }
+
+    public void printCollisionCount() {
+        int collisionCount = countCollisions();
+        System.out.println("Collision Count: " + collisionCount);
+    }
 }
 
