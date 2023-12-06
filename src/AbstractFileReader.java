@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 public abstract class AbstractFileReader {
     protected String fileName;
+    protected LinkedList timeList = new LinkedList();
 
 
 
@@ -79,15 +80,53 @@ public abstract class AbstractFileReader {
                 long endTime = System.nanoTime();
                 long duration = (endTime - startTime);
 
-                System.out.println("Time elapsed: " + duration + " nanoseconds");
+                timeList.add(duration);
             }
 
+            findMaxTime();
+            findMinTime();
+            findAverageTime();
+
+
             myReader.close();
+
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
     }
+
+    // find max time in timeList
+    public void findMaxTime() {
+        long max = (long) timeList.get(0);
+        for (int i = 1; i < timeList.size(); i++) {
+            if ((long) timeList.get(i) > max) {
+                max = (long) timeList.get(i);
+            }
+        }
+        System.out.println("Max time: " + max);
+    }
+
+    // find min time in timeList
+    public void findMinTime() {
+        long min = (long) timeList.get(0);
+        for (int i = 1; i < timeList.size(); i++) {
+            if ((long) timeList.get(i) < min) {
+                min = (long) timeList.get(i);
+            }
+        }
+        System.out.println("Min time: " + min);
+    }
+
+    // find average time in timeList
+    public void findAverageTime() {
+        long sum = 0;
+        for (int i = 0; i < timeList.size(); i++) {
+            sum += (long) timeList.get(i);
+        }
+        System.out.println("Average time: " + sum / timeList.size());
+    }
+
 
 
     // bu fonksiyon ne ise yariyodu aq

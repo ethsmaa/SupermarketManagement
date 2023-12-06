@@ -50,10 +50,29 @@ public class DoubleHashingHashTable<T> implements HashTable<T> {
     }
 
     public int doubleHashFunction(String key, int time) {
-        int hash = 0;
-        for (int i = 0; i < key.length(); i++)
-            hash = (31 * hash + key.charAt(i)) % TABLE_SIZE;
-        return time * (TABLE_SIZE - (hash % TABLE_SIZE));
+        int hash = hashFunction(key);
+        int prime = findPrevPrime(TABLE_SIZE);
+
+        return time * (prime - (hash % prime));
+    }
+
+    private int findPrevPrime(int n) {
+        while (!isPrime(n)) {
+            n--;
+        }
+        return n;
+    }
+
+    private boolean isPrime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override

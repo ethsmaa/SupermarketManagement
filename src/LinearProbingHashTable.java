@@ -1,7 +1,7 @@
 public class LinearProbingHashTable<T> implements HashTable<T> {
 
     private static final double LOAD_FACTOR = 0.5;
-    private static final int INITIAL_CAPACITY = 301;
+    private static final int INITIAL_CAPACITY = 3;
 
     private int capacity; // mevcut kapasite
     private int size; // mevcut eleman sayısı
