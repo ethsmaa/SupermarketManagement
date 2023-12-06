@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        FileReaderDH purchaseFile = new FileReaderDH("supermarket_dataset_50K.csv");
+        FileReaderLP purchaseFile = new FileReaderLP("supermarket_dataset_5.csv");
 
 
-        DoubleHashingHashTable D = (DoubleHashingHashTable) purchaseFile.readSupermarket();
+        LinearProbingHashTable D = (LinearProbingHashTable) purchaseFile.readSupermarket();
 
         D.print();
         D.printCollisionCount();
