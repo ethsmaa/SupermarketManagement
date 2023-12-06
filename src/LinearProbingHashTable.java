@@ -24,9 +24,10 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
     // polynomial accumulation function
     public int hashFunctionPAF(String key) {
         int hash = 0;
-        for (int i = 0; i < key.length(); i++)
-            hash = (31 * hash + key.charAt(i)) % capacity;
-        return hash;
+        for (int i = 0; i < key.length(); i++) {
+            hash += (Math.pow(33, key.length() - (i + 1)) * key.charAt(i))% capacity;
+        }
+        return hash % capacity;
     }
 
     @Override
@@ -116,12 +117,12 @@ public class LinearProbingHashTable<T> implements HashTable<T> {
         return true;
     }
 
-    private int hashFunctionPAF(String key, int tableSize) {
+    private int hashFunctionPAF(String key, int newCapacity) {
         int hash = 0;
         for (int i = 0; i < key.length(); i++) {
-            hash = (31 * hash + key.charAt(i)) % tableSize;
+            hash += (Math.pow(33, key.length() - (i + 1)) * key.charAt(i))% newCapacity;
         }
-        return hash;
+        return hash % capacity;
     }
 
     private int hashFunctionSSF(String key, int tableSize) {

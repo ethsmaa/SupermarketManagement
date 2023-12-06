@@ -5,7 +5,6 @@ import java.util.Scanner;
 public abstract class AbstractFileReader {
     protected String fileName;
     protected LinkedList searchTimeList = new LinkedList();
-    protected LinkedList indexTimeList = new LinkedList();
 
 
     public AbstractFileReader(String fileName) {
@@ -48,7 +47,6 @@ public abstract class AbstractFileReader {
                 Product product = new Product(date, productName);
 
 
-                long startTime = System.nanoTime();
                 if (map.get(userId) != null) {
                     map.get(userId).addToLinkedList(product);
                 } else { // first purchase transaction
@@ -57,12 +55,9 @@ public abstract class AbstractFileReader {
                     map.put(userId, purchase);
                 }
 
-                long endTime = System.nanoTime();
 
-                long duration = (endTime - startTime);
-                indexTimeList.add(duration);
             }
-            findTotalIndexTime();
+        //    findTotalIndexTime();
 
             myReader.close();
         } catch (FileNotFoundException e) {
@@ -74,6 +69,8 @@ public abstract class AbstractFileReader {
     }
 
 
+
+    /*
     // sum of all index time
     public void findTotalIndexTime() {
         long total = 0;
@@ -82,6 +79,8 @@ public abstract class AbstractFileReader {
         }
         System.out.println("Total index time: " + total);
     }
+
+     */
 
     // buradaki fonksiyon customer_1K.txt dosyasını , hashmapte arayıp bulduğu müşterileri ekrana yazdırıyor.
     public void customerReadandParse(HashTable<Purchase> hashMap) {
