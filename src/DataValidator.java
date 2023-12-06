@@ -7,7 +7,7 @@ public class DataValidator {
                 arrOfId[2].length() != 4 ||
                 arrOfId[3].length() != 4 ||
                 arrOfId[4].length() != 12) {
-            throw new RuntimeException("Id format is wrong");
+            throw new RuntimeException("Id format is wrong"); // should be 8-4-4-4-12
         }
     }
 
@@ -24,9 +24,6 @@ public class DataValidator {
     }
 
     public static void validateDate(int year, int month, int day) {
-        if (year < 0 || month < 0 || day < 0) {
-            throw new RuntimeException("Date cannot be negative");
-        }
         validateMonth(month);
         validateDay(day);
     }

@@ -12,10 +12,10 @@ public abstract class AbstractFileReader {
         this.fileName = fileName;
     }
 
-    protected abstract HashTable<Purchase> createHashTable();
+    protected abstract HashTable<Purchase> createHashTable(); // polymorphism
 
 
-    // buradaki fonksiyon supermarket_dataset_5.csv dosyasını okuyup, hash map oluşturuyor
+    // buradaki fonksiyon supermarket_dataset_5.csv dosyasını okuyup, hash map döndürüyo
     public HashTable<Purchase> readSupermarket() {
 
         HashTable<Purchase> map = createHashTable();
@@ -49,7 +49,7 @@ public abstract class AbstractFileReader {
 
                 if (map.get(userId) != null) {
                     map.get(userId).addToLinkedList(product);
-                } else {
+                } else { // first purchase transaction
                     Purchase purchase = new Purchase(userId, arrOfStr[1]);
                     purchase.addToLinkedList(product);
                     map.put(userId, purchase);

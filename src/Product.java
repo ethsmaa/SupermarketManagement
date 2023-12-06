@@ -7,10 +7,6 @@ public class Product {
         this.productName = productName;
     }
 
-    public void print() {
-        System.out.println(date + "\t" + productName);
-    }
-
     //get date
     public Date getDate() {
         return date;

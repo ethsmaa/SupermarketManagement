@@ -120,7 +120,6 @@ public class LinkedList {
     }
 
 
-    // sort functionç yılları sırala. yıllar da aynısa ayları sırala, aylarda aynıysa günleri sırala
     public void sort() {
         for (int i = 0; i < size(); i++) {
             // for each element for listOfProducts
@@ -155,13 +154,6 @@ public class LinkedList {
         }
 
     }
-
-
-
-
-
-
-
 
 
 }

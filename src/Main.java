@@ -10,6 +10,7 @@ public class Main {
         LinearProbingHashTable LINEARhashMap = (LinearProbingHashTable) purchaseFile.readSupermarket();
 
         LINEARhashMap.printCollisionCount();
+        LINEARhashMap.print();
         /*
         // customer read and parse
         FileReaderLP customerFile = new FileReaderLP("customer_1K.csv");
