@@ -4,10 +4,8 @@ import java.util.LinkedList;
 import java.util.Scanner;
 public abstract class AbstractFileReader {
     protected String fileName;
-    protected LinkedList searchTimeList = new LinkedList();
-    protected LinkedList indexTime = new LinkedList();
-
-
+    protected LinkedList searchTimeList = new LinkedList(); // to find average max and min time
+    protected LinkedList indexTime = new LinkedList(); // to find indexing time
 
     public AbstractFileReader(String fileName) {
         this.fileName = fileName;
@@ -15,8 +13,7 @@ public abstract class AbstractFileReader {
 
     protected abstract HashTable<Purchase> createHashTable(); // polymorphism
 
-
-    // buradaki fonksiyon supermarket_dataset_5.csv dosyasını okuyup, hash map döndürüyo
+    // that function reads supermarket_dataset_5.csv and uses hashmaps to store data
     public HashTable<Purchase> readSupermarket() {
 
         HashTable<Purchase> map = createHashTable();
@@ -24,9 +21,9 @@ public abstract class AbstractFileReader {
         try {
             File myObj = new File(fileName);
             Scanner myReader = new Scanner(myObj);
-            myReader.nextLine(); // ilk satırı atla cunku header
+            myReader.nextLine(); // it skips first line because it is header
 
-            long startTime = System.nanoTime();
+           // long startTime = System.nanoTime();  // to find indexing time
 
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
@@ -34,16 +31,15 @@ public abstract class AbstractFileReader {
 
                 String userId = arrOfStr[0];
 
-
                 DataValidator.validateUserId(userId);
-                DataValidator.validateUserIdLength(userId);
+                DataValidator.validateUserIdLength(userId);       // to check if user id
                 DataValidator.validateFileLine(arrOfStr);
 
                 int year = Integer.parseInt(arrOfStr[2].split("-")[0]);
                 int month = Integer.parseInt(arrOfStr[2].split("-")[1]);
                 int day = Integer.parseInt(arrOfStr[2].split("-")[2]);
 
-                DataValidator.validateDate(year, month, day);
+                DataValidator.validateDate(year, month, day);  // to check if date is valid
 
                 String productName = arrOfStr[3];
 
@@ -52,20 +48,18 @@ public abstract class AbstractFileReader {
 
 
 
-                if (map.get(userId) != null) {
-                    map.get(userId).addToLinkedList(product);
+                if (map.get(userId) != null) {   // if user id is already in the hashmap
+                    map.get(userId).addToLinkedList(product);   // add product to linkedlist
                 } else { // first purchase transaction
-                    Purchase purchase = new Purchase(userId, arrOfStr[1]);
+                    Purchase purchase = new Purchase(userId, arrOfStr[1]);   // create new purchase object
                     purchase.addToLinkedList(product);
                     map.put(userId, purchase);
                 }
-
-
-
             }
-            long endTime = System.nanoTime();
+
+           /* long endTime = System.nanoTime();    // end of indexing time
             long duration = endTime- startTime;
-            System.out.println("sure = " + duration);
+            System.out.println("Indexing Time: " + duration);*/
 
             myReader.close();
         } catch (FileNotFoundException e) {
@@ -76,9 +70,6 @@ public abstract class AbstractFileReader {
         return map;
     }
 
-
-
-
     // sum of all index time
     public void findTotalIndexTime() {
         long total = 0;
@@ -88,26 +79,21 @@ public abstract class AbstractFileReader {
         System.out.println("Total index time: " + total);
     }
 
-
-
-    // buradaki fonksiyon customer_1K.txt dosyasını , hashmapte arayıp bulduğu müşterileri ekrana yazdırıyor.
+    // that function writes customer_1K.txt and writes the customer which has been searched in hashmap.
     public void customerReadandParse(HashTable<Purchase> hashMap) {
         try {
             File myObj = new File("customer_1K.txt");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String id = myReader.nextLine();
-
                 DataValidator.validateUserId(id);
 
                 searchAndPrint(id,hashMap); // search and time calculations
-
             }
 
             findMaxTime();
             findMinTime();
             findAverageTime();
-
 
             myReader.close();
 
@@ -149,7 +135,7 @@ public abstract class AbstractFileReader {
     }
 
 
-
+    // that function searches the customer according to its id in hashmap and prints the customer's transactions
     public void searchAndPrint(String id, HashTable<Purchase> hashMap) {
         long startTime = System.nanoTime();
         Purchase purchase = hashMap.get(id);
@@ -163,14 +149,6 @@ public abstract class AbstractFileReader {
             System.out.printf(" %d transaction found for %s %n", purchase.getListOfProdcuts().size(), purchase.getName());
             purchase.getListOfProdcuts().print();
         }
-
-
-
-
-
-
     }
-
-
 
 }

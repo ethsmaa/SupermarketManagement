@@ -4,12 +4,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-       // FileReaderLP purchaseFile = new FileReaderLP("supermarket_dataset_50K.csv");
-        FileReaderLP purchaseFile = new FileReaderLP("supermarket_dataset_50K.csv");
+        // FileReaderLP purchaseFile = new FileReaderLP("supermarket_dataset_50K.csv");
+        FileReaderDH purchaseFile = new FileReaderDH("supermarket_dataset_50K.csv");
 
-       //  LinearProbingHashTable D = (LinearProbingHashTable) purchaseFile.readSupermarket();
-        LinearProbingHashTable D = (LinearProbingHashTable) purchaseFile.readSupermarket();
-
+        //  LinearProbingHashTable D = (LinearProbingHashTable) purchaseFile.readSupermarket();
+        DoubleHashingHashTable D = (DoubleHashingHashTable) purchaseFile.readSupermarket();
 
 
         // this part is for searching ONE customer
@@ -21,20 +20,13 @@ public class Main {
 
         */
 
-
-
         // this part is for searching ALL customers by reading customer_1K.csv file
-        FileReaderLP customerFile = new FileReaderLP("customer_1K.csv");
+        FileReaderDH customerFile = new FileReaderDH("customer_1K.csv");
         customerFile.customerReadandParse(D); // read, parse and print all customers
 
 
         // collision count in hashmap
         D.printCollisionCount();
-
-
-
-
-
     }
 
     public static void searchCustomer(HashTable<Purchase> hashMap, String id) {
@@ -46,7 +38,6 @@ public class Main {
             purchase.getListOfProdcuts().print();
         }
     }
-
 
 
 }
