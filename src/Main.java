@@ -23,8 +23,6 @@ public class Main {
 
 
 
-
-
         // this part is for searching ALL customers by reading customer_1K.csv file
         FileReaderLP customerFile = new FileReaderLP("customer_1K.csv");
         customerFile.customerReadandParse(D); // read, parse and print all customers

@@ -28,7 +28,7 @@ public class DoubleHashingHashTable<T> implements HashTable<T> {
         return hash % capacity;
     }
 
-    public int hashFunctionPAF(String key, int newCapacity) {
+    public int hashFunctionPAF(String key, int newCapacity) { // while resizing this method will be used
         int hash = 0;
         for (int i = 0; i < key.length(); i++) {
             hash += (Math.pow(33, key.length() - (i + 1)) * key.charAt(i))% newCapacity;
@@ -36,7 +36,7 @@ public class DoubleHashingHashTable<T> implements HashTable<T> {
         return hash % capacity;
     }
 
-    public int hashFunctionSSF(String key, int newCapacity) {
+    public int hashFunctionSSF(String key, int newCapacity) { // while resizing this method will be used
         int hash = 0;
         for (int i = 0; i < key.length(); i++)
             hash += key.charAt(i);
@@ -88,7 +88,7 @@ public class DoubleHashingHashTable<T> implements HashTable<T> {
         return Math.abs((hash + time * (prime - (hash % prime))) % capacity);
     }
 
-    public int doubleHashFunction(String key, int time, int newCapacity) {
+    public int doubleHashFunction(String key, int time, int newCapacity) { // while resizing this method will be used
         int hash = hashFunctionSSF(key);
         int prime = findPrevPrime(newCapacity);
 
