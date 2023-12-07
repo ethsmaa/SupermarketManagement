@@ -11,7 +11,7 @@ public class Main {
         DoubleHashingHashTable D = (DoubleHashingHashTable) purchaseFile.readSupermarket();
 
 
-        // this part is for searching ONE customer
+        // !! this part is for searching ONE customer
         /*
         System.out.println("Search: ");
         Scanner scanner = new Scanner(System.in);
@@ -20,12 +20,12 @@ public class Main {
 
         */
 
-        // this part is for searching ALL customers by reading customer_1K.csv file
+        //!!  this part is for searching ALL customers by reading customer_1K.csv file
         FileReaderDH customerFile = new FileReaderDH("customer_1K.csv");
         customerFile.customerReadandParse(D); // read, parse and print all customers
 
 
-        // collision count in hashmap
+        //!!  collision count in hashmap
         D.printCollisionCount();
     }
 

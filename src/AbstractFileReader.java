@@ -23,7 +23,7 @@ public abstract class AbstractFileReader {
             Scanner myReader = new Scanner(myObj);
             myReader.nextLine(); // it skips first line because it is header
 
-           // long startTime = System.nanoTime();  // to find indexing time
+            long startTime = System.nanoTime();  // to find indexing time
 
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
@@ -57,9 +57,9 @@ public abstract class AbstractFileReader {
                 }
             }
 
-           /* long endTime = System.nanoTime();    // end of indexing time
+            long endTime = System.nanoTime();    // end of indexing time
             long duration = endTime- startTime;
-            System.out.println("Indexing Time: " + duration);*/
+            System.out.println("Indexing Time: " + duration);
 
             myReader.close();
         } catch (FileNotFoundException e) {

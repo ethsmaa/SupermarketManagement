@@ -1,7 +1,7 @@
 public class DoubleHashingHashTable<T> implements HashTable<T> {
 
     private static final double LOAD_FACTOR = 0.5;  // load factor for resizing
-    private static final int INITIAL_CAPACITY = 11;  // initial capacity of the hash table
+    private static final int INITIAL_CAPACITY = 5;  // initial capacity of the hash table
     private int capacity; // current capacity
     private int size; // current element count
     private HashEntry<T>[] table;
