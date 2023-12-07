@@ -11,33 +11,42 @@ public class Main {
         LinearProbingHashTable D = (LinearProbingHashTable) purchaseFile.readSupermarket();
 
 
-        System.out.println("Enter a user id: ");
+
+        // this part is for searching ONE customer
+        /*
+        System.out.println("Search: ");
         Scanner scanner = new Scanner(System.in);
         String userId = scanner.nextLine();
-        Purchase purchase = (Purchase) D.get(userId);
+        searchCustomer(D, userId);
+
+        */
+
+
+
+
+
+        // this part is for searching ALL customers by reading customer_1K.csv file
+        FileReaderLP customerFile = new FileReaderLP("customer_1K.csv");
+        customerFile.customerReadandParse(D); // read, parse and print all customers
+
+
+        // collision count in hashmap
+        D.printCollisionCount();
+
+
+
+
+
+    }
+
+    public static void searchCustomer(HashTable<Purchase> hashMap, String id) {
+        Purchase purchase = (Purchase) hashMap.get(id);
         if (purchase == null) {
             System.out.println("Customer not found");
         } else {
             System.out.printf(" %d transaction found for %s %n", purchase.getListOfProdcuts().size(), purchase.getName());
             purchase.getListOfProdcuts().print();
         }
-
-
-
-
-
-
-        /*
-        // customer read and parse
-        FileReaderLP customerFile = new FileReaderLP("customer_1K.csv");
-        customerFile.customerReadandParse(D);
-
-        D.printCollisionCount();
-
-
-         */
-
-
     }
 
 

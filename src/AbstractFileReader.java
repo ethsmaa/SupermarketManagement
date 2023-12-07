@@ -100,14 +100,8 @@ public abstract class AbstractFileReader {
 
                 DataValidator.validateUserId(id);
 
-                long startTime = System.nanoTime();
-                hashMap.contains(id);
-                long endTime = System.nanoTime();
-                long duration = (endTime - startTime);
+                searchAndPrint(id,hashMap); // search and time calculations
 
-                    searchAndPrint(id,hashMap);
-
-                searchTimeList.add(duration);
             }
 
             findMaxTime();
@@ -156,9 +150,12 @@ public abstract class AbstractFileReader {
 
 
 
-    // bu fonksiyon ne ise yariyodu aq
     public void searchAndPrint(String id, HashTable<Purchase> hashMap) {
+        long startTime = System.nanoTime();
         Purchase purchase = hashMap.get(id);
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime);
+        searchTimeList.add(duration);
 
         if (purchase == null) {
             System.out.println("Customer not found");
