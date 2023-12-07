@@ -1,29 +1,51 @@
-import java.awt.*;
-import java.io.*;
 public class DoubleHashingHashTable<T> implements HashTable<T> {
-    protected final static int TABLE_SIZE = 1000000;
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_RED_BACKGROUND = "\u001B[45m";
-    public int doubleHashCollisions = 0;
 
+    private static final double LOAD_FACTOR = 0.5;
+    private static final int INITIAL_CAPACITY = 5;
 
-    protected HashEntry<T>[] table = new HashEntry[TABLE_SIZE];
+    private int capacity; // current capacity
+    private int size; // current element count
+    private HashEntry<T>[] table;
 
     public DoubleHashingHashTable() {
-        for (int i = 0; i < TABLE_SIZE; i++)
-            table[i] = null;
+        this.capacity = INITIAL_CAPACITY;
+        this.size = 0;
+        this.table = new HashEntry[capacity];
     }
 
-    public int hashFunction(String key) {
+    public int hashFunctionPAF(String key) {
+        int hash = 0;
+        for (int i = 0; i < key.length(); i++) {
+            hash += (Math.pow(33, key.length() - (i + 1)) * key.charAt(i))% capacity;
+        }
+        return hash % capacity;
+    }
+
+    public int hashFunctionSSF(String key) {
         int hash = 0;
         for (int i = 0; i < key.length(); i++)
-            hash = (31 * hash + key.charAt(i)) % TABLE_SIZE;
-        return hash;
+            hash += key.charAt(i);
+        return hash % capacity;
+    }
+
+    public int hashFunctionPAF(String key, int newCapacity) { // while resizing this method will be used
+        int hash = 0;
+        for (int i = 0; i < key.length(); i++) {
+            hash += (Math.pow(33, key.length() - (i + 1)) * key.charAt(i))% newCapacity;
+        }
+        return hash % capacity;
+    }
+
+    public int hashFunctionSSF(String key, int newCapacity) { // while resizing this method will be used
+        int hash = 0;
+        for (int i = 0; i < key.length(); i++)
+            hash += key.charAt(i);
+        return hash % newCapacity;
     }
 
     @Override
     public T get(String key) {
-        int hash = hashFunction(key);
+        int hash = hashFunctionSSF(key);
 
         if (table[hash] != null) {
             int time = 1;
@@ -31,7 +53,8 @@ public class DoubleHashingHashTable<T> implements HashTable<T> {
                 if (table[hash].getKey().equals(key)) {
                     return table[hash].getValue();
                 }
-                hash = (hash + doubleHashFunction(key, time)) % TABLE_SIZE;
+
+                hash = doubleHashFunction(key, time);
                 time++;
             }
         }
@@ -40,39 +63,91 @@ public class DoubleHashingHashTable<T> implements HashTable<T> {
 
     @Override
     public void put(String key, T value) {
-        int hash = hashFunction(key);
+        if ((double) size / capacity > LOAD_FACTOR) {
+            resize();
+        }
 
-        if (table[hash] == null) {
-            table[hash] = new HashEntry<T>(key, value);
-        } else {
+        int hash = hashFunctionSSF(key);
+        if (table[hash] != null) {
             int time = 1;
             while (table[hash] != null) {
-                hash = (hash + doubleHashFunction(key, time)) % TABLE_SIZE;
+                if(hash<0)
+                    break;
+                hash = doubleHashFunction(key, time);
                 time++;
-                doubleHashCollisions++;
             }
-            table[hash] = new HashEntry<T>(key, value);
         }
+        table[hash] = new HashEntry<>(key, value);
+        size++;
     }
 
     public int doubleHashFunction(String key, int time) {
-        int hash = 0;
-        for (int i = 0; i < key.length(); i++)
-            hash = (29 * hash + key.charAt(i)) % TABLE_SIZE;
-        return time * (TABLE_SIZE - (hash % TABLE_SIZE));
+        int hash = hashFunctionSSF(key);
+        int prime = findPrevPrime(capacity);
+
+        return Math.abs((hash + time * (prime - (hash % prime))) % capacity);
+    }
+
+    public int doubleHashFunction(String key, int time, int newCapacity) { // while resizing this method will be used
+        int hash = hashFunctionSSF(key);
+        int prime = findPrevPrime(newCapacity);
+
+        return Math.abs((hash + time * (prime - (hash % prime))) % capacity);
+    }
+
+    private void resize() {
+        int newCapacity = findNextPrime(2 * capacity);
+        HashEntry<T>[] newTable = new HashEntry[newCapacity];
+
+        for (HashEntry<T> entry : table) {
+            if (entry != null) {
+                int hash = hashFunctionSSF(entry.getKey(), newCapacity);
+                int time = 1;
+                while (newTable[hash] != null) {
+                    hash =  doubleHashFunction(entry.getKey(), time, newCapacity);
+                    time++;
+                }
+                newTable[hash] = entry;
+            }
+        }
+
+        table = newTable;
+        capacity = newCapacity;
+    }
+
+    private int findNextPrime(int n) {
+        while (!isPrime(n)) {
+            n++;
+        }
+        return n;
+    }
+
+    private int findPrevPrime(int n) {
+        while (!isPrime(n)) {
+            n--;
+        }
+        return n;
+    }
+
+    private boolean isPrime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
     public void print() {
-        for (int i = 0; i < TABLE_SIZE; i++) {
+        for (int i = 0; i < capacity; i++) {
             if (table[i] != null) {
                 Purchase purchase = (Purchase) table[i].getValue();
                 System.out.printf(" %d transaction found for %s %n", purchase.getListOfProdcuts().size(), purchase.getName());
                 purchase.getListOfProdcuts().print();
-                System.out.println(ANSI_RED_BACKGROUND+ "It belongs to Double Hashing" + ANSI_RESET);
-                System.out.println("Number of Collisions: " + doubleHashCollisions);
-                System.out.println();
-
             }
         }
     }
@@ -81,5 +156,26 @@ public class DoubleHashingHashTable<T> implements HashTable<T> {
     public boolean contains(String key) {
         return get(key) != null;
     }
-}
 
+    public int countCollisions() {
+        int collisionCount = 0;
+
+        for (int i = 0; i < capacity; i++) {
+            if (table[i] != null) {
+                int hash = hashFunctionSSF(table[i].getKey());
+
+                while (hash != i && table[hash] != null) {
+                    collisionCount++;
+                    hash = (hash + 1) % capacity;
+                }
+            }
+        }
+
+        return collisionCount;
+    }
+
+    public void printCollisionCount() {
+        int collisionCount = countCollisions();
+        System.out.println("Collision Count: " + collisionCount);
+    }
+}

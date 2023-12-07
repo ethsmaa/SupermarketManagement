@@ -5,7 +5,8 @@ import java.util.Scanner;
 public abstract class AbstractFileReader {
     protected String fileName;
     protected LinkedList searchTimeList = new LinkedList();
-    protected LinkedList indexTimeList = new LinkedList();
+    protected LinkedList indexTime = new LinkedList();
+
 
 
     public AbstractFileReader(String fileName) {
@@ -24,6 +25,8 @@ public abstract class AbstractFileReader {
             File myObj = new File(fileName);
             Scanner myReader = new Scanner(myObj);
             myReader.nextLine(); // ilk satırı atla cunku header
+
+            long startTime = System.nanoTime();
 
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
@@ -48,7 +51,7 @@ public abstract class AbstractFileReader {
                 Product product = new Product(date, productName);
 
 
-                long startTime = System.nanoTime();
+
                 if (map.get(userId) != null) {
                     map.get(userId).addToLinkedList(product);
                 } else { // first purchase transaction
@@ -57,12 +60,12 @@ public abstract class AbstractFileReader {
                     map.put(userId, purchase);
                 }
 
-                long endTime = System.nanoTime();
 
-                long duration = (endTime - startTime);
-                indexTimeList.add(duration);
+
             }
-            findTotalIndexTime();
+            long endTime = System.nanoTime();
+            long duration = endTime- startTime;
+            System.out.println("sure = " + duration);
 
             myReader.close();
         } catch (FileNotFoundException e) {
@@ -74,14 +77,18 @@ public abstract class AbstractFileReader {
     }
 
 
+
+
     // sum of all index time
     public void findTotalIndexTime() {
         long total = 0;
-        for (int i = 0; i < indexTimeList.size(); i++) {
-            total += (long) indexTimeList.get(i);
+        for (int i = 0; i < indexTime.size(); i++) {
+            total += (long) indexTime.get(i);
         }
         System.out.println("Total index time: " + total);
     }
+
+
 
     // buradaki fonksiyon customer_1K.txt dosyasını , hashmapte arayıp bulduğu müşterileri ekrana yazdırıyor.
     public void customerReadandParse(HashTable<Purchase> hashMap) {
@@ -91,12 +98,10 @@ public abstract class AbstractFileReader {
             while (myReader.hasNextLine()) {
                 String id = myReader.nextLine();
 
-                long startTime = System.nanoTime();
-                hashMap.contains(id);
-                long endTime = System.nanoTime();
-                long duration = (endTime - startTime);
+                DataValidator.validateUserId(id);
 
-                searchTimeList.add(duration);
+                searchAndPrint(id,hashMap); // search and time calculations
+
             }
 
             findMaxTime();
@@ -120,7 +125,7 @@ public abstract class AbstractFileReader {
                 max = (long) searchTimeList.get(i);
             }
         }
-        System.out.println("Max time: " + max);
+        System.out.println("Max time: " +  max);
     }
 
     // find min time in searchTimeList
@@ -131,7 +136,7 @@ public abstract class AbstractFileReader {
                 min = (long) searchTimeList.get(i);
             }
         }
-        System.out.println("Min time: " + min);
+        System.out.println("Min time: " +  min);
     }
 
     // find average time in searchTimeList
@@ -140,14 +145,17 @@ public abstract class AbstractFileReader {
         for (int i = 0; i < searchTimeList.size(); i++) {
             sum += (long) searchTimeList.get(i);
         }
-        System.out.println("Average time: " + sum / searchTimeList.size());
+        System.out.println("Average time: " + (sum / searchTimeList.size() ));
     }
 
 
 
-    // bu fonksiyon ne ise yariyodu aq
     public void searchAndPrint(String id, HashTable<Purchase> hashMap) {
+        long startTime = System.nanoTime();
         Purchase purchase = hashMap.get(id);
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime);
+        searchTimeList.add(duration);
 
         if (purchase == null) {
             System.out.println("Customer not found");
